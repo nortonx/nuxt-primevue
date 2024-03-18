@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-nogutter surface-section text-800">
+  <div>
     <Header />
     <slot />
     <Footer />
