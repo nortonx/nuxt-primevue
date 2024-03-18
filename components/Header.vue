@@ -26,3 +26,15 @@ const items = computed(() => [
   }
 ])
 </script>
+
+<style lang="scss" scoped>
+.p-menubar {
+  .p-menuitem {
+    .p-menuitem-content {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+</style>

@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test:unit": "vitest --run --reporter verbose"
   },
   "dependencies": {
     "nuxt": "^3.10.3",
@@ -23,6 +24,7 @@
     "happy-dom": "^13.10.0",
     "nuxt-primevue": "^0.3.1",
     "playwright-core": "^1.42.1",
+    "sass": "^1.72.0",
     "vitest": "^1.4.0"
   }
 }
