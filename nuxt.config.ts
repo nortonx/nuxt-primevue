@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    'nuxt-primevue'
+    'nuxt-primevue',
+    '@nuxt/test-utils/module',
   ],
   primevue: {
     theme: 'saga-blue',
