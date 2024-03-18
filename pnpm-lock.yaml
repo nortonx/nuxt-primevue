@@ -8,6 +8,9 @@ dependencies:
   nuxt:
     specifier: ^3.10.3
     version: 3.10.3(vite@5.1.6)
+  primeflex:
+    specifier: ^3.3.1
+    version: 3.3.1
   primeicons:
     specifier: ^6.0.1
     version: 6.0.1
@@ -5008,6 +5011,10 @@ packages:
       ansi-styles: 5.2.0
       react-is: 18.2.0
     dev: true
+
+  /primeflex@3.3.1:
+    resolution: {integrity: sha512-zaOq3YvcOYytbAmKv3zYc+0VNS9Wg5d37dfxZnveKBFPr7vEIwfV5ydrpiouTft8MVW6qNjfkaQphHSnvgQbpQ==}
+    dev: false
 
   /primeicons@6.0.1:
     resolution: {integrity: sha512-KDeO94CbWI4pKsPnYpA1FPjo79EsY9I+M8ywoPBSf9XMXoe/0crjbUK7jcQEDHuc0ZMRIZsxH3TYLv4TUtHmAA==}
