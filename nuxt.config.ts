@@ -6,12 +6,12 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
   ],
   primevue: {
-    theme: 'saga-blue',
+    theme: 'saga-purple',
     ripple: true,
     cssLayerOrder: 'reset,primevue',
     directives: {
       include: ['Ripple', 'Tooltip']
     }
   },
-  css: ['primevue/resources/themes/saga-blue/theme.css', 'primevue/resources/primevue.min.css', 'primeicons/primeicons.css'],
+  css: ['primevue/resources/themes/saga-purple/theme.css', 'primevue/resources/primevue.min.css', 'primeicons/primeicons.css'],
 })
