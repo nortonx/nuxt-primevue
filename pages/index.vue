@@ -6,8 +6,17 @@
         <div class="text-6xl text-primary font-bold mb-3">visitors deserve to see</div>
         <p class="mt-0 mb-4 text-700 line-height-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             
-        <Button label="Learn More" type="button" class="mr-3 p-button-raised"></Button>
+        <Button label="Learn More" type="button" class="mr-3 p-button-raised" @click="toggleDialog"></Button>
         <Button label="Live Demo" type="button" class="p-button-outlined"></Button>
+        <Dialog 
+          v-model:visible="isVisible"
+          modal
+          header="Header"
+          :visible="isVisible"
+          @onHide="isVisible = false"
+        >
+          <p>Content</p>
+        </Dialog>
       </section>
     </div>
     <div class="col-12 md:col-6 overflow-hidden">
@@ -18,4 +27,11 @@
 
 <script setup lang="ts">
 import Button from "primevue/button"
+import Dialog from "primevue/dialog"
+
+const isVisible = ref(false)
+
+function toggleDialog() {
+  isVisible.value = !isVisible.value
+}
 </script>
