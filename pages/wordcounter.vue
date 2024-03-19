@@ -63,11 +63,22 @@ import Textarea from "primevue/textarea"
 import { ref, computed } from "vue"
 
 const content = ref("")
-const words = computed(() => content.value.split(" ").length)
+
+const words = computed(() => {
+  if (content.value === "") return 0
+  return content.value.trim().split(/\s+/).length
+})
+
 const characters = computed(() => content.value.length)
-const phrases = computed(() => content.value.split(".").length)
-const paragraphs = computed(() => content.value.split("\n").length)
 
+const phrases = computed(() => {
+  if (content.value === "") return 0
+  return content.value.split(/[.!?]+/).length - 1
+})
 
+const paragraphs = computed(() => {
+  if (content.value === "") return 0
+  return content.value.split("\n").length - 1
+})
 
 </script>

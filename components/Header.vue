@@ -3,7 +3,7 @@
     <template #item="{ item }">
       <NuxtLink :to="item.to">
         <i :class="item.icon"></i>
-        <span>{{ item.label }}</span>
+        <span class="ml-1 mr-2">{{ item.label }}</span>
       </NuxtLink>
     </template>
   </Menubar>
