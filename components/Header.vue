@@ -20,6 +20,11 @@ const items = computed(() => [
     to: "/"
   },
   {
+    label: "Word Counter",
+    icon: "pi pi-fw pi-pencil",
+    to: "/wordcounter"
+  },
+  {
     label: "About",
     icon: "pi pi-fw pi-info",
     to: "/about"
