@@ -14,46 +14,11 @@
           class="w-full border-round shadow-2 p-3 text-800"
         ></Textarea>
       </div>
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="surface-card shadow-2 p-3 border-round">
-          <div class="flex justify-content-between md-3">
-            <div>
-              <span class="block text-500 font-medium mb-3">Words</span>
-              <div class="text-900 font-medium text-xl">{{ words }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="surface-card shadow-2 p-3 border-round">
-          <div class="flex justify-content-between md-3">
-            <div>
-              <span class="block text-500 font-medium mb-3">Characters</span>
-              <div class="text-900 font-medium text-xl">{{ characters }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="surface-card shadow-2 p-3 border-round">
-          <div class="flex justify-content-between md-3">
-            <div>
-              <span class="block text-500 font-medium mb-3">Phrases</span>
-              <div class="text-900 font-medium text-xl">{{ phrases }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 md:col-6 lg:col-3">
-        <div class="surface-card shadow-2 p-3 border-round">
-          <div class="flex justify-content-between md-3">
-            <div>
-              <span class="block text-500 font-medium mb-3">Paragraphs</span>
-              <div class="text-900 font-medium text-xl">{{ paragraphs }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
+      <CounterBox :counter="words" label="Words" />
+      <CounterBox :counter="characters" label="Characters" />
+      <CounterBox :counter="phrases" label="Phrases" />
+      <CounterBox :counter="paragraphs" label="Paragraphs" />
     </div>
   </div>
 </template>
@@ -61,7 +26,7 @@
 <script lang="ts" setup>
 import Textarea from "primevue/textarea"
 import { ref, computed } from "vue"
-
+import CounterBox from "@/components/CounterBox.vue"
 const content = ref("")
 
 const words = computed(() => {
