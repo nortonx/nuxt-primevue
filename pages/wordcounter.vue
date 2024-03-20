@@ -27,6 +27,8 @@
 import Textarea from "primevue/textarea"
 import { ref, computed } from "vue"
 import CounterBox from "@/components/CounterBox.vue"
+
+
 const content = ref("")
 
 const words = computed(() => {
