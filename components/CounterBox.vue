@@ -3,8 +3,8 @@
     <div class="surface-card shadow-2 p-3 border-round">
       <div class="flex justify-content-between md-3">
         <div>
-          <span class="block text-500 font-medium mb-3">{{ label }}</span>
-          <div class="text-900 font-medium text-xl">{{ counter }}</div>
+          <span class="block text-500 font-medium mb-3">{{ props.label }}</span>
+          <div class="text-900 font-medium text-xl">{{ props.counter }}</div>
         </div>
       </div>
     </div>
