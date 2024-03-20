@@ -8,14 +8,12 @@
             ref="dt"
             :value="products"
             dataKey="id"
-
           >
             <Column field="name" header="Name"></Column>
             <Column field="price" header="Price"></Column>
             <Column field="quantity" header="Quantity"></Column>
             <Column field="discount" header="Discount"></Column>
             <Column field="subtotal" header="Subtotal"></Column>
-            
           </DataTable>
         </div>
       </div>
@@ -34,7 +32,16 @@
 <script setup lang="ts">
 import { computed } from "vue"
 
-const products = [
+type product = {
+  id: number
+  name: string
+  price: number
+  quantity: number
+  discount: string
+  subtotal: number | any
+}
+
+const products: product[] = [
   {
     id: 1,
     name: "Apple",
@@ -58,7 +65,6 @@ const products = [
     quantity: 5,
     discount: "-",
     subtotal: computed(() => products[2].price * products[2].quantity - (products[2].price * products[2].quantity * 0)),
-    
   }
 ]
 
