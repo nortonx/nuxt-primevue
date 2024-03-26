@@ -25,6 +25,11 @@ const items = computed(() => [
     to: "/wordcounter"
   },
   {
+    label: "ToDo List",
+    icon: "pi pi-fw pi-list",
+    to: "/todo"
+  },
+  {
     label: "Orders",
     icon: "pi pi-fw pi-shopping-cart",
     to: "/orders" 

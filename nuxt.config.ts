@@ -14,6 +14,9 @@ export default defineNuxtConfig({
       APP_MODE: process.env?.NODE_ENV,
     }
   },
+  buildModules: [
+    '@pinia/nuxt',
+  ],
   primevue: {
     
     options: {

@@ -28,4 +28,7 @@
 
 <script lang="ts" setup>
 import InputText from "primevue/inputtext"
+import { useTodoStore } from "@/stores/todo.store"
+
+const todoStore = useTodoStore()
 </script>
