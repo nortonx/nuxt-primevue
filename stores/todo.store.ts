@@ -1,4 +1,4 @@
-import { defineStore, acceptHMRUpdate } from "pinia"
+import { defineStore } from "pinia"
 import { ref, computed } from "vue"
 
 type ToDo = {

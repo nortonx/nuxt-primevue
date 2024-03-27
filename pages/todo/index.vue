@@ -11,7 +11,7 @@
       <div class="col-12 lg:col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <div class="flex flex-column mx-8">
-            <div v-for="(todo, index) in todoStore.todos" class="text-900 font-bold text-xl">
+            <div v-for="(todo, index) in todoStore.todos" :key="index" class="text-900 font-bold text-xl">
               <div
                 @click="strikeTodo(index)"
                 :style="todo.completed ? 'text-decoration: line-through' : 'text-decoration: none'"
@@ -28,8 +28,8 @@
       <div class="col-12 lg:col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <div class="flex justify-content-between mx-8">
-            <div class="text-900 font-bold text-xl">Total</div>
-            <div class="text-900 font-bold text-xl">$20.95</div>
+            <div class="text-900 font-bold text-xl">Total: {{ todoStore.todos.length }}</div>
+            <div class="text-900 font-bold text-xl">Completed: {{ todoStore.todos.filter(todo => todo.completed).length }}</div>
           </div>
         </div>
       </div>
