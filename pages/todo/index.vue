@@ -4,12 +4,23 @@
     <div class="grid">
       <div class="col-12 lg:col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
-          <InputText placeholder="What needs to be done?" class="w-full"></InputText>
+          <InputText placeholder="What needs to be done?" class="w-full" v-model="todo"></InputText>
+          <Button label="Add" class="w-full mt-4" @click="addTodo"></Button>
         </div>
       </div>
       <div class="col-12 lg:col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
-          <div class="flex justify-content-between mx-8">
+          <div class="flex flex-column mx-8">
+            <div v-for="(todo, index) in todoStore.todos" class="text-900 font-bold text-xl">
+              <div
+                @click="strikeTodo(index)"
+                :style="todo.completed ? 'text-decoration: line-through' : 'text-decoration: none'"
+                class="my-2"
+              >
+                {{ todo.title }}
+              </div>
+            </div>
+            
             
           </div>
         </div>
@@ -28,7 +39,23 @@
 
 <script lang="ts" setup>
 import InputText from "primevue/inputtext"
+import { ref } from "vue"
 import { useTodoStore } from "@/stores/todo.store"
 
 const todoStore = useTodoStore()
+const todo = ref(null)
+
+function addTodo() {
+  todoStore.add({
+    title: todo.value,
+    completed: false
+  })
+  todo.value = null
+}
+
+function strikeTodo(index: number) {
+  todoStore.todos[index].completed = !todoStore.todos[index].completed
+}
+ 
+
 </script>

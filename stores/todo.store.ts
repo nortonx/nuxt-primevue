@@ -37,7 +37,3 @@ export const useTodoStore = defineStore('todo', () => {
     toggle
   }
 })
-
-if (import.meta.hot) {
-  import.meta.hot.accept(acceptHMRUpdate(useTodoStore, import.meta.hot))
-}

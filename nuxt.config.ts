@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     'nuxt-primevue',
+    '@pinia/nuxt',
   ],
   runtimeConfig: {
     public: {
@@ -14,11 +15,8 @@ export default defineNuxtConfig({
       APP_MODE: process.env?.NODE_ENV,
     }
   },
-  buildModules: [
-    '@pinia/nuxt',
-  ],
   primevue: {
-    
+    usePrimeVue: true,
     options: {
       ripple: true,
     },
