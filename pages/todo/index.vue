@@ -29,7 +29,7 @@
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <div class="flex justify-content-between mx-8">
             <div class="text-900 font-bold text-xl">Total: {{ todoStore.todos.length }}</div>
-            <div class="text-900 font-bold text-xl">Completed: {{ todoStore.todos.filter(todo => todo.completed).length }}</div>
+            <div class="text-900 font-bold text-xl">Completed: {{ completedItems }}</div>
           </div>
         </div>
       </div>
@@ -39,12 +39,16 @@
 
 <script lang="ts" setup>
 import InputText from "primevue/inputtext"
-import { ref } from "vue"
-import { useTodoStore } from "@/stores/todo.store"
+import { ref, computed } from "vue"
+import { useTodoStore, ToDo } from "@/stores/todo.store"
 
 const todoStore = useTodoStore()
 const todo = ref(null)
 
+// Computed properties
+const completedItems = computed(() => todoStore.todos.filter((todo: ToDo) => todo.completed).length)
+
+// Methods
 function addTodo() {
   todoStore.add({
     title: todo.value,

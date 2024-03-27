@@ -1,7 +1,7 @@
 import { defineStore } from "pinia"
 import { ref, computed } from "vue"
 
-type ToDo = {
+export type ToDo = {
   id: number
   title: string
   completed: boolean
