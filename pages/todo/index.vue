@@ -11,17 +11,18 @@
       <div class="col-12 lg:col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <div class="flex flex-column mx-8">
-            <div v-for="(todo, index) in todoStore.todos" :key="index" class="text-900 font-bold text-xl">
-              <div
-                @click="strikeTodo(index)"
-                :style="todo.completed ? 'text-decoration: line-through' : 'text-decoration: none'"
-                class="my-2"
-              >
-                {{ todo.title }}
-              </div>
-            </div>
-            
-            
+            <ul>
+              <li v-for="(todo, index) in todoStore.todos" :key="index" class="text-900 font-bold text-xl flex flex-row align-items-center">
+                <i class="pi mx-2" :class="todo.completed ? 'pi-check' : 'pi-times'"></i>
+                <div
+                  @click="strikeTodo(index)"
+                  :style="todo.completed ? 'text-decoration: line-through' : 'text-decoration: none'"
+                  class="my-2"
+                >
+                  {{ todo.title }}
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -40,13 +41,13 @@
 <script lang="ts" setup>
 import InputText from "primevue/inputtext"
 import { ref, computed } from "vue"
-import { useTodoStore, ToDo } from "@/stores/todo.store"
+import { useTodoStore } from "@/stores/todo.store"
 
 const todoStore = useTodoStore()
 const todo = ref(null)
 
 // Computed properties
-const completedItems = computed(() => todoStore.todos.filter((todo: ToDo) => todo.completed).length)
+const completedItems = computed(() => todoStore.todos.filter((todo) => todo.completed).length)
 
 // Methods
 function addTodo() {
@@ -61,5 +62,11 @@ function strikeTodo(index: number) {
   todoStore.todos[index].completed = !todoStore.todos[index].completed
 }
  
-
 </script>
+
+<style lang="scss" scoped>
+ul {
+  list-style-type: none;
+}
+
+</style>
