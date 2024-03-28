@@ -3,8 +3,16 @@ import Vue from "@vitejs/plugin-vue"
 
 export default defineVitestConfig({
   test: {
-    environment: 'jsdom',
+    environment: 'happy-dom',
     globals: true,
+    environmentOptions: {
+      nuxt: {
+        mock: {
+          intersectionObserver: true,
+          indexedDb: true,
+        }
+      }
+    }
   },
   plugins: [
     Vue()

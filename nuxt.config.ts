@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-primevue',
     '@pinia/nuxt',
+    '@nuxt/test-utils/module'
   ],
   runtimeConfig: {
     public: {
