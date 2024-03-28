@@ -4,7 +4,12 @@
     <div class="grid">
       <div class="col-12 lg:col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
-          <InputText placeholder="What needs to be done?" class="w-full" v-model="todo"></InputText>
+          <InputText 
+            placeholder="What needs to be done?" 
+            class="w-full" 
+            v-model="todo"
+            @keydown.enter="addTodo"
+          ></InputText>
           <Button label="Add" class="w-full mt-4" @click="addTodo"></Button>
         </div>
       </div>
