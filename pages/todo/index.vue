@@ -4,14 +4,20 @@
     <div class="grid">
       <div class="col-12 lg:col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
-          <InputText placeholder="What needs to be done?" class="w-full" v-model="todo"></InputText>
+          <InputText 
+            placeholder="What needs to be done?" 
+            class="w-full" 
+            v-model="todo"
+            @keydown.enter="addTodo"
+          ></InputText>
           <Button label="Add" class="w-full mt-4" @click="addTodo"></Button>
         </div>
       </div>
       <div class="col-12 lg:col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <div class="flex flex-column mx-8">
-            <ul>
+            <div class="text-900 font-bold text-xl text-center" v-if="emptyList">No items in the list</div>
+            <ul v-else>
               <li v-for="(todo, index) in todoStore.todos" :key="index" class="text-900 font-bold text-xl flex flex-row align-items-center">
                 <i class="pi mx-2" :class="todo.completed ? 'pi-check' : 'pi-times'"></i>
                 <div
@@ -48,6 +54,7 @@ const todo = ref(null)
 
 // Computed properties
 const completedItems = computed(() => todoStore.todos.filter((todo) => todo.completed).length)
+const emptyList = computed(() => todoStore.todos.length === 0)
 
 // Methods
 function addTodo() {
