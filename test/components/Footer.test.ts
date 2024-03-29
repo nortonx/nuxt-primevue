@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils';
-import Footer from '@/components/Footer.vue';
+import Footer from '../../components/Footer.vue';
 import { test, expect } from 'vitest';
 
-test('Footer component renders correctly', async () => {
-  const wrapper = await mount(Footer);
+test('Footer component renders correctly', () => {
+  const wrapper = mount(Footer);
   expect(wrapper.html()).toMatchSnapshot();
 });
 

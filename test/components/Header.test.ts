@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import Header from '@/components/Header.vue';
+import Header from '../../components/Header.vue';
 import { test, expect } from 'vitest';
 
 test.skip('Header component renders correctly', () => {
