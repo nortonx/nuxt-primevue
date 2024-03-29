@@ -1,9 +1,9 @@
 import { mount } from '@vue/test-utils'
-import CounterBox from '@/components/CounterBox.vue'
+import CounterBox from '../../components/CounterBox.vue'
 import { test, expect } from 'vitest'
 
-test('CounterBox component renders correctly', async () => {
-  const wrapper = await mount(CounterBox)
+test('CounterBox component renders correctly', () => {
+  const wrapper = mount(CounterBox)
   expect(wrapper.html()).toMatchSnapshot()
 })
 

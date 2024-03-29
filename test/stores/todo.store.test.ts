@@ -1,5 +1,5 @@
 import { setActivePinia, createPinia } from 'pinia';
-import { useTodoStore } from '@/stores/todo.store';
+import { useTodoStore } from '../../stores/todo.store';
 import { test, expect, describe, beforeEach } from 'vitest'
 
 describe('Todo store', () => {
