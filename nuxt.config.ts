@@ -23,6 +23,9 @@ export default defineNuxtConfig({
     cssLayerOrder: 'primevue',
     directives: {
       include: ['Ripple', 'Tooltip']
+    },
+    components: {
+      include: ['DataTable', 'Column', 'Button', 'InputText']
     }
   },
   css: [
