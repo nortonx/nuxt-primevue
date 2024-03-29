@@ -30,6 +30,11 @@ const items = computed(() => [
     to: "/todo"
   },
   {
+    label: "Data",
+    icon: "pi pi-fw pi-database",
+    to: "/data"
+  },
+  {
     label: "Orders",
     icon: "pi pi-fw pi-shopping-cart",
     to: "/orders" 
