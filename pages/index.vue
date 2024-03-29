@@ -4,14 +4,14 @@
       <section>
         <span class="block text-6xl font-bold mb-1">Create the screens your</span>
         <div class="text-6xl text-primary font-bold mb-3">visitors deserve to see</div>
-        <p class="mt-0 mb-4 text-700 line-height-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p class="mt-0 mb-4 text-700 line-height-3">This is a landing page created using PrimeBlocks. Feel free to click on the links above and see the examples.</p>
             
-        <Button label="Learn More" type="button" class="mr-3 p-button-raised" @click="toggleDialog"></Button>
-        <Button label="Live Demo" type="button" class="p-button-outlined"></Button>
+        <Button label="Toggle Dialog Example" type="button" class="mr-3 p-button-raised" @click="toggleDialog"></Button>
+        <Button label="AI generated image" type="button" icon="pi pi-arrow-right" class="p-button-outlined"></Button>
         <Dialog 
           v-model:visible="isVisible"
           modal
-          header="Header content"
+          header="Header content for Dialog Example"
           footer="Footer content"
           close-on-escape
           @onHide="isVisible = false"
@@ -24,7 +24,7 @@
     </div>
     <div class="col-12 md:col-6 overflow-hidden">
       <img 
-        src="/images/hero-1.png"
+        src="/images/AI_generated_2.jpeg"
         alt="Woman looking right"
         class="md:ml-auto block md:h-full"
         style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)"
