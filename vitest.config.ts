@@ -1,20 +1,23 @@
 import { defineVitestConfig } from '@nuxt/test-utils/config'
-import Vue from "@vitejs/plugin-vue"
+import { resolve } from 'path'
 
 export default defineVitestConfig({
   test: {
-    environment: 'happy-dom',
-    globals: true,
-    environmentOptions: {
-      nuxt: {
-        mock: {
-          intersectionObserver: true,
-          indexedDb: true,
+    environment: 'jsdom',
+    include: ['test/**/*.test.ts'],
+    deps: {
+      // inline: ['@vue', '@vueuse', '@vue/composition-api'],
+      optimizer: {
+        web: {
+          include: ['@vue', '@vueuse', '@vue/composition-api'],
         }
       }
-    }
+    },
+    globals: true,
+    reporters: 'dot',
+    setupFiles: [resolve(__dirname, 'test/setup.ts')]
   },
   plugins: [
-    Vue()
+    
   ]
 })

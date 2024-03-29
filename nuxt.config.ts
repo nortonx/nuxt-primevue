@@ -26,7 +26,7 @@ export default defineNuxtConfig({
       include: ['Ripple', 'Tooltip']
     },
     components: {
-      include: ['DataTable', 'Column', 'Button', 'InputText', 'IconField', 'InputIcon']
+      include: ['DataTable', 'Column', 'Button', 'InputText', 'IconField', 'InputIcon', 'Menubar']
     }
   },
   css: [
