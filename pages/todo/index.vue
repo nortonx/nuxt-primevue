@@ -45,24 +45,26 @@
 </template>
 
 <script lang="ts" setup>
-import InputText from "primevue/inputtext"
 import { ref, computed } from "vue"
+import { type ToDo } from "@/types/todo.type";
 import { useTodoStore } from "@/stores/todo.store"
 
 const todoStore = useTodoStore()
-const todo = ref(null)
+const todo = ref<string>("")
 
 // Computed properties
-const completedItems = computed(() => todoStore.todos.filter((todo) => todo.completed).length)
+const completedItems = computed(() => todoStore.todos.filter((todo: ToDo) => todo.completed).length)
 const emptyList = computed(() => todoStore.todos.length === 0)
 
 // Methods
 function addTodo() {
+  if (todo.value.trim() === "") return
   todoStore.add({
+    id: todoStore.todos.length + 1,
     title: todo.value,
     completed: false
   })
-  todo.value = null
+  todo.value = ""
 }
 
 function strikeTodo(index: number) {
