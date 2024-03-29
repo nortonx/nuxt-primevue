@@ -1,11 +1,6 @@
 import { defineStore } from "pinia"
 import { ref, computed } from "vue"
-
-export type ToDo = {
-  id: number
-  title: string
-  completed: boolean
-}
+import { type ToDo } from "@/types/todo.type"
 
 export const useTodoStore = defineStore('todo', () => {
 

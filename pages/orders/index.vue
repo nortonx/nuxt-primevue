@@ -1,8 +1,8 @@
 <template>
-  <div class="surface-ground px-4 py-8 md:px-6 lg:px-8">
+  <div class="px-4 py-8 md:px-6 lg:px-8">
     <div class="text-900 font-bold text-6xl mb-4 text-center">Checkout</div>
     <div class="grid">
-      <div class="col-12 lg:col-8 col-offset-2">
+      <div class="col-12">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <DataTable
             ref="dt"
@@ -17,7 +17,7 @@
           </DataTable>
         </div>
       </div>
-      <div class="col-12 lg:col-8 col-offset-2">
+      <div class="col-12">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <div class="flex justify-content-between mx-8">
             <div class="text-900 font-bold text-xl">Total</div>
@@ -30,18 +30,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue"
+import { type Product } from "@/types/product.type"
 
-type product = {
-  id: number
-  name: string
-  price: number
-  quantity: number
-  discount: string
-  subtotal: number | any
-}
 
-const products: product[] = [
+
+const products: Product[] = [
   {
     id: 1,
     name: "Apple",

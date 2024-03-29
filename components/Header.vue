@@ -3,7 +3,7 @@
     <template #item="{ item }">
       <NuxtLink :to="item.to">
         <i :class="item.icon"></i>
-        <span class="ml-1 mr-2">{{ item.label }}</span>
+        <span class="ml-1 mr-5">{{ item.label }}</span>
       </NuxtLink>
     </template>
   </Menubar>
@@ -28,6 +28,11 @@ const items = computed(() => [
     label: "ToDo List",
     icon: "pi pi-fw pi-list",
     to: "/todo"
+  },
+  {
+    label: "Data",
+    icon: "pi pi-fw pi-database",
+    to: "/data"
   },
   {
     label: "Orders",
