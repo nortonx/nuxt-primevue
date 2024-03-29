@@ -1,5 +1,5 @@
 <template>
-  <div class="surface-ground px-4 py-5 md:px-6 lg:px-8">
+  <div class="px-4 py-5 md:px-6 lg:px-8">
     <div class="grid">
       <div class="col-12">
         <h1 class="text-4xl font-bold text-center mb-4">Word Counter</h1>
