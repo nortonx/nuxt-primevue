@@ -7,6 +7,7 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-primevue',
     '@pinia/nuxt',
+    '@nuxt/test-utils/module'
   ],
   runtimeConfig: {
     public: {
@@ -25,7 +26,7 @@ export default defineNuxtConfig({
       include: ['Ripple', 'Tooltip']
     },
     components: {
-      include: ['DataTable', 'Column', 'Button', 'InputText', 'IconField', 'InputIcon']
+      include: ['DataTable', 'Column', 'Button', 'InputText', 'IconField', 'InputIcon', 'Menubar']
     }
   },
   css: [
