@@ -1,19 +1,20 @@
 <template>
-  <div class="surface-ground px-4 py-8 md:px-6 lg:px-8">
+  <div class="px-4 py-8 md:px-6 lg:px-8">
     <div class="text-900 font-bold text-6xl mb-4 text-center">TO-DO List</div>
     <div class="grid">
-      <div class="col-12 lg:col-8 col-offset-2">
+      <div class="col-12 ">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <InputText 
             placeholder="What needs to be done?" 
             class="w-full" 
             v-model="todo"
             @keydown.enter="addTodo"
+            variant="filled"
           ></InputText>
           <Button label="Add" class="w-full mt-3" @click="addTodo"></Button>
         </div>
       </div>
-      <div class="col-12 lg:col-8 col-offset-2">
+      <div class="col-12">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <div class="flex flex-column mx-4">
             <div class="text-900 font-bold text-xl text-center" v-if="emptyList">No items in the list</div>
@@ -32,9 +33,9 @@
           </div>
         </div>
       </div>
-      <div class="col-12 lg:col-8 col-offset-2">
+      <div class="col-12">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
-          <div class="flex justify-content-between mx-8">
+          <div class="flex justify-content-between mx-4">
             <div class="text-900 font-bold text-xl">Total: {{ todoStore.todos.length }}</div>
             <div class="text-900 font-bold text-xl">Completed: {{ completedItems }}</div>
           </div>

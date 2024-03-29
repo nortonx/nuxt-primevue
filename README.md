@@ -1,5 +1,9 @@
 # Nuxt 3 Minimal Starter
 
+The goal of this project is to create some kind of portfolio/showcase of Nuxt 3.x, Vue 3.x, Pinia and PrimeVue.
+
+This project is hosted at [https://nuxt-primevue.vercel.app/](https://nuxt-primevue.vercel.app/)
+
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup

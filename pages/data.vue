@@ -1,20 +1,23 @@
 <template>
-  <div class="surface-ground px-4 py-8 md:px-6 lg:px-8">
+  <div class="px-4 py-8 md:px-6 lg:px-8">
     <div class="text-900 font-bold text-6xl mb-4 text-center">Data List {{ searchTerm }}</div>
     <div class="text-700 font-bold text-2xl mb-4 text-center">Filtered data length: {{ filteredData.length }}</div>
     <div class="grid">
-      <div class="col-12 lg:col-10 col-offset-1">
+      <div class="col-12">
         <div class="shadow-2 p-4 h-full flex flex-column surface-card ">
-          <InputText
-            placeholder="Search by ACT Symbol"
-            class="w-full"
-            v-model="searchTerm"
-            ref="searchField"
-            variant="filled"
-          ></InputText>
+          <IconField iconPosition="left">
+            <InputIcon class="pi pi-search"></InputIcon>
+            <InputText
+              placeholder="Search by ACT Symbol"
+              class="w-full"
+              v-model="searchTerm"
+              ref="searchField"
+              variant="filled"
+            ></InputText>
+          </IconField>
         </div>
       </div>
-      <div class="col-12 lg:col-10 col-offset-1">
+      <div class="col-12">
         <DataTable :value="filteredData" :paginator="true" :rows="10" :rowsPerPageOptions="[5, 10, 20]">
           <Column field="ACT Symbol" header="ACT Symbol" sortable></Column>
           <Column field="NASDAQ Symbol" header="NASDAQ Symbol" sortable></Column>
