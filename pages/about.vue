@@ -4,7 +4,7 @@
       <div class="text-blue-600 font-bold mb-3"><i class="pi pi-prime"></i>&nbsp;POWERED BY PrimeVue</div>
       <div class="text-900 font-bold text-5xl mb-3">Push the buttton</div>
       <div class="text-700 text-2xl mb-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit numquam eligendi quos.</div>
-      <Button label="Join Now" icon="pi pi-prime" class="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap"></Button>
+      <Button label="Push the Button" icon="pi pi-prime" class="font-bold px-5 py-3 p-button-raised p-button-rounded white-space-nowrap"></Button>
     </div>
   </div>
 </template>
