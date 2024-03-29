@@ -6,7 +6,6 @@ export default defineVitestConfig({
     environment: 'jsdom',
     include: ['test/**/*.test.ts'],
     deps: {
-      // inline: ['@vue', '@vueuse', '@vue/composition-api'],
       optimizer: {
         web: {
           include: ['@vue', '@vueuse', '@vue/composition-api'],
