@@ -8,7 +8,7 @@
       <div class="col-12">
         <Textarea
           v-model="content"
-          rows="12"
+          rows="8"
           cols="60"
           autoResize
           class="w-full border-round shadow-2 p-3 text-800"
