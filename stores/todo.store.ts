@@ -22,6 +22,10 @@ export const useTodoStore = defineStore('todo', () => {
     todos.value[index].completed = !todos.value[index].completed
   }
 
+  function clearCompleted() {
+    todos.value = todos.value.filter(todo => !todo.completed)
+  }
+
   return {
     todos,
     completedTodos,
@@ -29,6 +33,7 @@ export const useTodoStore = defineStore('todo', () => {
     totalTodos,
     add,
     remove,
-    toggle
+    toggle,
+    clearCompleted
   }
 })
