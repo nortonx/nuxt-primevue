@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Footer component renders correctly 1`] = `
+exports[`Footer component > should render correctly and match snapshot 1`] = `
 "<footer class="text-700 text-center">
   <p class="footer-text">© 2024</p>
 </footer>"
