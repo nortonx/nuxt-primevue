@@ -3,7 +3,7 @@
   A unit test with "shallowMount" would be a unit test since it mounts the component only.
 */
 import { shallowMount } from '@vue/test-utils';
-import Header from '../../components/Header.vue';
+import Header from '@/components/Header.vue';
 import { describe, it, expect } from 'vitest';
 
 describe('Header component', () => {
