@@ -1,19 +1,20 @@
-import { mount } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import Footer from '../../components/Footer.vue';
-import { test, expect } from 'vitest';
+import { describe, it, test, expect, beforeEach } from 'vitest';
 
-test('Footer component renders correctly', () => {
-  const wrapper = mount(Footer);
-  expect(wrapper.html()).toMatchSnapshot();
-});
 
-test('Footer component renders with correct text value', () => {
-  const wrapper = mount(Footer);
-  const expectedText = `© ${new Date().getFullYear()}`;
-  console.log('expectedText', expectedText)
-  const actualText = wrapper.find('.footer-text').text();
-  console.log('actualText', actualText)
-  expect(actualText).toBe(expectedText);
-});
-
- 
+describe('Footer component', () => {
+  let wrapper: any
+  beforeEach(() => {
+    wrapper = shallowMount(Footer)
+  })
+  it('should render correctly and match snapshot', () => {
+    expect(wrapper.html()).toMatchSnapshot();
+  });
+  
+  test('should render with correct text value', () => {
+    const expectedText = `© ${new Date().getFullYear()}`;
+    const actualText = wrapper.find('.footer-text').text();
+    expect(actualText).toBe(expectedText);
+  });
+})

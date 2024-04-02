@@ -3,7 +3,7 @@ import { resolve } from 'path'
 
 export default defineVitestConfig({
   test: {
-    environment: 'jsdom',
+    environment: 'happy-dom',
     include: ['test/**/*.test.ts'],
     deps: {
       optimizer: {
