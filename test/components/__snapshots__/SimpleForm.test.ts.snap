@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SimpleForm component > it should render correctly and match snapshot 1`] = `
+"<div class="formgrid grid">
+  <div class="field col-12 md:col-6"><label for="firstName" class="block text-900 font-medium mb-2">First Name</label>
+    <input-text-stub id="firstName" modelvalue="" class="w-full mb-3"></input-text-stub>
+  </div>
+  <div class="field col-12 md:col-6"><label for="lastName" class="block text-900 font-medium mb-2">Last Name</label>
+    <input-text-stub id="lastName" modelvalue="" class="w-full mb-3"></input-text-stub>
+  </div>
+  <div class="field col-12 md:col-6"><label for="email" class="block text-900 font-medium mb-2">Email</label>
+    <input-text-stub id="email" modelvalue="" class="w-full mb-3"></input-text-stub>
+  </div>
+  <div class="field col-12 md:col-6"><label for="phone" class="block text-900 font-medium mb-2">Phone</label>
+    <input-text-stub id="phone" modelvalue="" class="w-full mb-3"></input-text-stub>
+  </div>
+  <div class="field col-12 md:col-6"><label for="password" class="block text-900 font-medium mb-2">Password</label>
+    <input-text-stub id="password" type="password" class="w-full mb-3"></input-text-stub>
+  </div>
+  <div class="field col-12 md:col-6"><label class="block text-900 font-medium mb-2" for="country">Country</label>
+    <dropdown-stub id="country" modelvalue="" options="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" optionlabel="name" placeholder="Select a Country" class="w-full"></dropdown-stub>
+  </div>
+  <div class="field col-12 action-row flex justify-content-center">
+    <button-stub label="Sign Up"></button-stub>
+  </div>
+</div>"
+`;
