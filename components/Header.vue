@@ -41,9 +41,14 @@ const items = computed(() => [
     to: "/data"
   },
   {
+    label: "Form",
+    icon: "pi pi-fw pi-user",
+    to: "/form"
+  },
+  {
     label: "Orders",
     icon: "pi pi-fw pi-shopping-cart",
-    to: "/orders" 
+    to: "/orders"
   },
   {
     label: "About",
