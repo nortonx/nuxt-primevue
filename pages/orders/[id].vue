@@ -36,8 +36,11 @@ import { onMounted } from "vue"
 
 const route = useRoute()
 
+const randomValue = ref(Math.floor(Math.random() * parseInt(route.params.id)))
+
 onMounted(() => {
   console.log("Hello from checkout page with id: ", route.params.id)
+  console.log("Random value: ", randomValue)
 })
 
 
@@ -47,24 +50,24 @@ const products: Product[] = [
     name: "Apple",
     price: 3,
     quantity: 4,
-    discount: "2%",
-    subtotal: computed(() => products[0].price * products[0].quantity - (products[0].price * products[0].quantity * 0.02)),
+    discount: `${randomValue.value}%`,
+    subtotal: computed(() => products[0].price * products[0].quantity - (products[0].price * products[0].quantity * randomValue.value / 100)),
   },
   {
     id: 2,
     name: "Orange",
     price: 2,
     quantity: 3,
-    discount: "5%",
-    subtotal: computed(() => products[1].price * products[1].quantity - (products[1].price * products[1].quantity * 0.05))
+    discount: `${randomValue.value}%`,
+    subtotal: computed(() => products[1].price * products[1].quantity - (products[1].price * products[1].quantity * randomValue.value / 100))
   },
   {
     id: 3,
     name: "Banana",
     price: 2,
     quantity: 5,
-    discount: "-",
-    subtotal: computed(() => products[2].price * products[2].quantity - (products[2].price * products[2].quantity * 0)),
+    discount: `${randomValue.value}%`,
+    subtotal: computed(() => products[2].price * products[2].quantity - (products[2].price * products[2].quantity * randomValue.value / 100)),
   }
 ]
 

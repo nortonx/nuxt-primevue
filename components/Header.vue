@@ -1,5 +1,11 @@
 <template>
   <Menubar :model="items">
+    <template #start>
+      <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2rem">
+          <path d="..." fill="var(--primary-color)" />
+          <path d="..." fill="var(--text-color)" />
+      </svg>
+    </template>
     <template #item="{ item }">
       <NuxtLink :to="item.to">
         <i :class="item.icon"></i>
@@ -35,9 +41,14 @@ const items = computed(() => [
     to: "/data"
   },
   {
+    label: "Form",
+    icon: "pi pi-fw pi-user",
+    to: "/form"
+  },
+  {
     label: "Orders",
     icon: "pi pi-fw pi-shopping-cart",
-    to: "/orders" 
+    to: "/orders"
   },
   {
     label: "About",

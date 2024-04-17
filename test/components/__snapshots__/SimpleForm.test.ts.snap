@@ -1,0 +1,34 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SimpleForm component > it should render correctly and match snapshot 1`] = `
+"<div data-v-e0d39d9a="" class="formgrid grid">
+  <div data-v-e0d39d9a="" class="field col-12 md:col-6"><label data-v-e0d39d9a="" for="firstName" class="block text-900 font-medium mb-1">First Name</label>
+    <input-text-stub data-v-e0d39d9a="" id="firstName" modelvalue="" class="w-full mb-2"></input-text-stub>
+    <!--v-if-->
+  </div>
+  <div data-v-e0d39d9a="" class="field col-12 md:col-6"><label data-v-e0d39d9a="" for="lastName" class="block text-900 font-medium mb-1">Last Name</label>
+    <input-text-stub data-v-e0d39d9a="" id="lastName" modelvalue="" class="w-full mb-2"></input-text-stub>
+    <!--v-if-->
+  </div>
+  <div data-v-e0d39d9a="" class="field col-12 md:col-6"><label data-v-e0d39d9a="" for="email" class="block text-900 font-medium mb-1">Email</label>
+    <input-text-stub data-v-e0d39d9a="" id="email" modelvalue="" class="w-full mb-2"></input-text-stub>
+    <!--v-if-->
+  </div>
+  <div data-v-e0d39d9a="" class="field col-12 md:col-6"><label data-v-e0d39d9a="" for="phone" class="block text-900 font-medium mb-1">Phone</label>
+    <input-text-stub data-v-e0d39d9a="" id="phone" modelvalue="" class="w-full mb-2"></input-text-stub>
+    <!--v-if-->
+  </div>
+  <div data-v-e0d39d9a="" class="field col-12 md:col-6"><label data-v-e0d39d9a="" for="password" class="block text-900 font-medium mb-1">Password</label>
+    <input-text-stub data-v-e0d39d9a="" id="password" type="password" modelvalue="" class="w-full mb-2"></input-text-stub>
+    <!--v-if-->
+  </div>
+  <div data-v-e0d39d9a="" class="field col-12 md:col-6"><label data-v-e0d39d9a="" class="block text-900 font-medium mb-1" for="country">Country</label>
+    <dropdown-stub data-v-e0d39d9a="" id="country" modelvalue="" options="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" optionlabel="name" placeholder="Select a Country" class="w-full mb-2"></dropdown-stub>
+    <!--v-if-->
+  </div>
+  <div data-v-e0d39d9a="" class="errors"><code data-v-e0d39d9a=""></code></div>
+  <div data-v-e0d39d9a="" class="field col-12 action-row flex justify-content-center">
+    <button-stub data-v-e0d39d9a="" label="Sign Up"></button-stub>
+  </div>
+</div>"
+`;
