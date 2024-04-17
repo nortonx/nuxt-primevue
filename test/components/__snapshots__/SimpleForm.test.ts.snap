@@ -26,7 +26,7 @@ exports[`SimpleForm component > it should render correctly and match snapshot 1`
     <dropdown-stub data-v-e0d39d9a="" id="country" modelvalue="" options="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" optionlabel="name" placeholder="Select a Country" class="w-full mb-2"></dropdown-stub>
     <!--v-if-->
   </div>
-  <div data-v-e0d39d9a="" class="errors"></div>
+  <div data-v-e0d39d9a="" class="errors"><code data-v-e0d39d9a=""></code></div>
   <div data-v-e0d39d9a="" class="field col-12 action-row flex justify-content-center">
     <button-stub data-v-e0d39d9a="" label="Sign Up"></button-stub>
   </div>

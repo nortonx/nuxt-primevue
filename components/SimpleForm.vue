@@ -3,27 +3,27 @@
     <div class="field col-12 md:col-6">
       <label for="firstName" class="block text-900 font-medium mb-1">First Name</label>
       <InputText id="firstName" v-model="formData.firstName" class="w-full mb-2"/>
-      <span v-if="$v.formData.firstName.$error" class="error-message">Campo obrigatório</span>
+      <span v-if="$v.formData.firstName.$error" class="error-message">{{ $v.formData.firstName.required.$message }}</span>
     </div>
     <div class="field col-12 md:col-6">
       <label for="lastName" class="block text-900 font-medium mb-1">Last Name</label>
       <InputText id="lastName" v-model="formData.lastName" class="w-full mb-2"/>
-      <span v-if="$v.formData.lastName.$error" class="error-message">Campo obrigatório</span>
+      <span v-if="$v.formData.lastName.$error" class="error-message">{{ $v.formData.lastName.required.$message }}</span>
     </div>
     <div class="field col-12 md:col-6">
       <label for="email" class="block text-900 font-medium mb-1">Email</label>
       <InputText id="email" v-model="formData.email" class="w-full mb-2"/>
-      <span v-if="$v.formData.email.$error" class="error-message">Campo inválido</span>
+      <span v-if="$v.formData.email.$error" class="error-message">{{ $v.formData.email.required.$message }}</span>
     </div>
     <div class="field col-12 md:col-6">
       <label for="phone" class="block text-900 font-medium mb-1">Phone</label>
       <InputText id="phone" v-model="formData.phone" class="w-full mb-2"/>
-      <span v-if="$v.formData.phone.$error" class="error-message">Campo obrigatório</span>
+      <span v-if="$v.formData.phone.$error" class="error-message">{{ $v.formData.phone.required.$message }}</span>
     </div>
     <div class="field col-12 md:col-6">
       <label for="password" class="block text-900 font-medium mb-1">Password</label>
       <InputText id="password" type="password" v-model="formData.password" class="w-full mb-2" />
-      <span v-if="$v.formData.password.$error" class="error-message">Campo obrigatório</span>
+      <span v-if="$v.formData.password.$error" class="error-message">{{ $v.formData.password.required.$message }}</span>
     </div>
     <div class="field col-12 md:col-6">
       <label class="block text-900 font-medium mb-1" for="country">Country</label>
@@ -35,10 +35,12 @@
         placeholder="Select a Country"
         class="w-full mb-2"
       />
-      <span v-if="$v.formData.country.$error" class="error-message">Campo obrigatório</span>
+      <span v-if="$v.formData.country.$error" class="error-message">{{ $v.formData.country.required.$message }}</span>
     </div>
     <div class="errors">
-      <p v-for="error in $v.$errors" :key="error.$uid">{{ error.$params }}</p>
+      <code>
+        <p v-for="error in $v.$errors" :key="error.$uid">{{ error.$property }} : {{ error.$params }}</p>
+      </code>
     </div>
     <div class="field col-12 action-row flex justify-content-center">
       <Button label="Sign Up" @click="$v.$validate()"></Button>
@@ -51,7 +53,7 @@ import { ref, watchEffect } from "vue"
 import Dropdown from "primevue/dropdown"
 import { type FormData } from "@/types/formData.type"
 import { useVuelidate } from "@vuelidate/core"
-import { required, email, minLength, alpha } from "@vuelidate/validators"
+import { required, email, minLength, alpha, helpers } from "@vuelidate/validators"
 
 const formData = ref<FormData>({
   firstName: "",
@@ -64,12 +66,12 @@ const formData = ref<FormData>({
 
 const rules = {
   formData: {
-    firstName: {required },
-    lastName: { required },
-    email: { required, email },
-    password: { required, minLength: minLength(6) },
-    phone: { required, alpha },
-    country: { required }
+    firstName: { required: helpers.withMessage("This field is required", required) },
+    lastName: { required: helpers.withMessage("This field is required", required) },
+    email: { required: helpers.withMessage("E-mail with invalid format", required), email },
+    password: { required: helpers.withMessage("Password should be at least 6 characters long", required), minLength: minLength(6) },
+    phone: { required: helpers.withMessage("Phone number should be alphanumeric", required), alpha },
+    country: { required: helpers.withMessage("Select an option", required) }
   }
 }
 
