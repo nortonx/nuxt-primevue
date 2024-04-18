@@ -2,27 +2,55 @@
   <div class="formgrid grid">
     <div class="field col-12 md:col-6">
       <label for="firstName" class="block text-900 font-medium mb-1">First Name</label>
-      <InputText id="firstName" v-model="formData.firstName" class="w-full mb-2"/>
+      <InputText 
+        id="firstName" 
+        v-model="formData.firstName" 
+        class="w-full mb-2" 
+        @blur="$v.formData.firstName.$touch" 
+      />
       <span v-show="$v.formData.firstName.$error" class="error-message">{{ $v.formData.firstName.required.$message }}</span>
     </div>
     <div class="field col-12 md:col-6">
       <label for="lastName" class="block text-900 font-medium mb-1">Last Name</label>
-      <InputText id="lastName" v-model="formData.lastName" class="w-full mb-2"/>
+      <InputText 
+        id="lastName" 
+        v-model="formData.lastName" 
+        class="w-full mb-2"
+        @blur="$v.formData.lastName.$touch"
+      />
       <span v-show="$v.formData.lastName.$error" class="error-message">{{ $v.formData.lastName.required.$message }}</span>
     </div>
     <div class="field col-12 md:col-6">
       <label for="email" class="block text-900 font-medium mb-1">Email</label>
-      <InputText id="email" v-model="formData.email" class="w-full mb-2"/>
+      <InputText 
+        id="email" 
+        v-model="formData.email" 
+        class="w-full mb-2"
+        @blur="$v.formData.email.$touch"
+      />
       <span v-show="$v.formData.email.$error" class="error-message">{{ $v.formData.email.required.$message }}</span>
     </div>
     <div class="field col-12 md:col-6">
       <label for="phone" class="block text-900 font-medium mb-1">Phone</label>
-      <InputText id="phone" v-model="formData.phone" class="w-full mb-2"/>
+      <InputMask 
+        id="phone" 
+        mask="+99 (99) 9 9999-9999" 
+        placeholder="+1 (99) 9 9999-9999" 
+        v-model="formData.phone" 
+        class="w-full mb-2"
+        @blur="$v.formData.phone.$touch"
+      />
       <span v-show="$v.formData.phone.$error" class="error-message">{{ $v.formData.phone.required.$message }}</span>
     </div>
     <div class="field col-12 md:col-6">
       <label for="password" class="block text-900 font-medium mb-1">Password</label>
-      <InputText id="password" type="password" v-model="formData.password" class="w-full mb-2" />
+      <InputText 
+        id="password" 
+        type="password" 
+        v-model="formData.password" 
+        class="w-full mb-2"
+        @blur="$v.formData.password.$touch"
+      />
       <span v-show="$v.formData.password.$error" class="error-message">{{ $v.formData.password.required.$message }}</span>
     </div>
     <div class="field col-12 md:col-6">
@@ -41,19 +69,22 @@
       <code>
         <p v-for="error in $v.$errors" :key="error.$uid">{{ error.$property }} : {{ error.$params }}</p>
       </code>
+      <code v-if="isFormValid">
+        {{ formData }}
+      </code>
     </div>
     <div class="field col-12 action-row flex justify-content-center">
-      <Button label="Sign Up" @click="$v.$validate()"></Button>
+      <Button label="Sign Up" @click="submitForm"></Button>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, watchEffect } from "vue"
 import Dropdown from "primevue/dropdown"
+import InputMask from "primevue/inputmask"
 import { type FormData } from "@/types/formData.type"
 import { useVuelidate } from "@vuelidate/core"
-import { required, email, minLength, alpha, helpers } from "@vuelidate/validators"
+import { required, email, minLength, helpers } from "@vuelidate/validators"
 
 const formData = ref<FormData>({
   firstName: "",
@@ -64,13 +95,15 @@ const formData = ref<FormData>({
   country: ""
 })
 
+const isFormValid = ref(false)
+
 const rules = {
   formData: {
     firstName: { required: helpers.withMessage("This field is required", required) },
     lastName: { required: helpers.withMessage("This field is required", required) },
     email: { required: helpers.withMessage("E-mail with invalid format", required), email },
     password: { required: helpers.withMessage("Password should be at least 6 characters long", required), minLength: minLength(6) },
-    phone: { required: helpers.withMessage("Phone number should be alphanumeric", required), alpha },
+    phone: { required: helpers.withMessage("Phone number is required", required) },
     country: { required: helpers.withMessage("Select an option", required) }
   }
 }
@@ -91,11 +124,12 @@ const countries = ref([
   { name: 'United States', code: 'US' }
 ])
 
-watchEffect(() => {
-  if (formData.value) {
-    console.log("Form Data Changed", formData.value)
+async function submitForm() {
+  isFormValid.value = await $v.value.$validate()
+  if (!isFormValid.value) {
+    console.log("Form is not valid")
   }
-})
+}
 
 </script>
 
