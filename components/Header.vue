@@ -51,6 +51,11 @@ const items = computed(() => [
     to: "/orders"
   },
   {
+    label: "Ships",
+    icon: "pi pi-fw pi-star",
+    to: "/ships"
+  },
+  {
     label: "About",
     icon: "pi pi-fw pi-info",
     to: "/about"
