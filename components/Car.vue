@@ -28,6 +28,7 @@ const props = defineProps<{
 
 <style scoped>
 .car-item {
+  min-width: 160px;
   img {
     width: 120px;
     height: 120px;

@@ -3,7 +3,7 @@
     <h1 class="text-center">Parking</h1>
     <div class="flex flex-wrap justify-content-center">
       <car 
-        v-for="car in data"
+        v-for="car in carData"
         :key="car.plate"
         :car-model="car.model"
         :car-plate="car.plate"
@@ -15,10 +15,11 @@
 </template>
 
 <script lang="ts" setup>
-import { type Car } from "@/types/car.type"
+import carData from "@/data/carData.json"
 
-import data from "@/data/carData.json"
+const API_URL = "http://localhost:3000"
 
+const { data, error } = useFetch(`${API_URL}/users`)
 onMounted(() => {
   console.log(data)
 })
