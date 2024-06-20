@@ -1,10 +1,10 @@
 <template>
-  <div class="main-layout">
-    <Header />
-    <main>
-      <slot />
+  <div class="main-layout p-3">
+    <Header></Header>
+    <main class="mt-3">
+      <slot></slot>
     </main>
-    <Footer />
+    <Footer></Footer>
   </div>
 </template>
 
@@ -17,6 +17,4 @@
 .main-layout {
   height: 96vh;
 }
-
-
 </style>

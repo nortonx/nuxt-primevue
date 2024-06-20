@@ -1,0 +1,158 @@
+[
+  {
+    "owner": "John Doe",
+    "plate": "ABC123",
+    "model": "Toyota Camry",
+    "color": "Red"
+  },
+  {
+    "owner": "Jane Smith",
+    "plate": "XYZ789",
+    "model": "Honda Civic",
+    "color": "Blue"
+  },
+  {
+    "owner": "Mark Johnson",
+    "plate": "DEF456",
+    "model": "Ford Mustang",
+    "color": "Yellow"
+  },
+  {
+    "owner": "Emily Davis",
+    "plate": "GHI789",
+    "model": "Chevrolet Corvette",
+    "color": "Black"
+  },
+  {
+    "owner": "Michael Wilson",
+    "plate": "JKL012",
+    "model": "BMW X5",
+    "color": "Silver"
+  },
+  {
+    "owner": "Sarah Thompson",
+    "plate": "MNO345",
+    "model": "Audi A4",
+    "color": "White"
+  },
+  {
+    "owner": "David Anderson",
+    "plate": "PQR678",
+    "model": "Mercedes-Benz C-Class",
+    "color": "Gray"
+  },
+  {
+    "owner": "Jessica Martinez",
+    "plate": "STU901",
+    "model": "Volkswagen Golf",
+    "color": "Green"
+  },
+  {
+    "owner": "Christopher Lee",
+    "plate": "VWX234",
+    "model": "Subaru Outback",
+    "color": "Brown"
+  },
+  {
+    "owner": "Amanda Harris",
+    "plate": "YZA567",
+    "model": "Mazda CX-5",
+    "color": "Orange"
+  },
+  {
+    "owner": "Daniel Clark",
+    "plate": "BCD890",
+    "model": "Hyundai Sonata",
+    "color": "Purple"
+  },
+  {
+    "owner": "Olivia Rodriguez",
+    "plate": "EFG123",
+    "model": "Kia Sportage",
+    "color": "Teal"
+  },
+  {
+    "owner": "Matthew Walker",
+    "plate": "HIJ456",
+    "model": "Lexus RX",
+    "color": "Gold"
+  },
+  {
+    "owner": "Sophia Lewis",
+    "plate": "KLM789",
+    "model": "Jeep Wrangler",
+    "color": "Navy"
+  },
+  {
+    "owner": "James Turner",
+    "plate": "NOP012",
+    "model": "Tesla Model 3",
+    "color": "Pink"
+  },
+  {
+    "owner": "Isabella Hall",
+    "plate": "QRS345",
+    "model": "Volvo XC90",
+    "color": "Beige"
+  },
+  {
+    "owner": "Joseph Young",
+    "plate": "TUV678",
+    "model": "GMC Sierra",
+    "color": "Cyan"
+  },
+  {
+    "owner": "Samantha Wright",
+    "plate": "WXY901",
+    "model": "Chrysler 300",
+    "color": "Maroon"
+  },
+  {
+    "owner": "Andrew King",
+    "plate": "ZAB234",
+    "model": "Nissan Altima",
+    "color": "Indigo"
+  },
+  {
+    "owner": "Madison Scott",
+    "plate": "CDE567",
+    "model": "Infiniti Q50",
+    "color": "Lime"
+  },
+  {
+    "owner": "Joshua Green",
+    "plate": "FGH890",
+    "model": "Cadillac Escalade",
+    "color": "Turquoise"
+  },
+  {
+    "owner": "Abigail Adams",
+    "plate": "IJK123",
+    "model": "Porsche 911",
+    "color": "Plum"
+  },
+  {
+    "owner": "Ethan Baker",
+    "plate": "LMN456",
+    "model": "Land Rover Range Rover",
+    "color": "Magenta"
+  },
+  {
+    "owner": "Natalie Hill",
+    "plate": "OPQ789",
+    "model": "Jaguar F-Type",
+    "color": "Olive"
+  },
+  {
+    "owner": "William Turner",
+    "plate": "RST012",
+    "model": "Acura MDX",
+    "color": "Salmon"
+  },
+  {
+    "owner": "Grace Mitchell",
+    "plate": "UVW345",
+    "model": "Mini Cooper",
+    "color": "Violet"
+  }
+]
