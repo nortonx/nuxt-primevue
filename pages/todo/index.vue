@@ -19,12 +19,12 @@
           <div class="flex flex-column mx-4">
             <div class="text-900 font-bold text-xl text-center" v-if="emptyList">No items in the list</div>
             <ul v-else>
-              <li v-for="(todo, index) in todoStore.todos" :key="index" class="text-900 font-bold text-xl flex flex-row align-items-center">
+              <li v-for="(todo, index) in todoStore.todos" :key="index" class="todo-item text-900 font-bold text-xl flex flex-row align-items-center">
                 <i class="pi mx-2" :class="todo.completed ? 'pi-check' : 'pi-times'"></i>
                 <div
                   @click="strikeTodo(index)"
                   :style="todo.completed ? 'text-decoration: line-through' : 'text-decoration: none'"
-                  class="my-2"
+                  class="my-2 todo-item__text"
                 >
                   {{ todo.title }}
                 </div>
@@ -77,6 +77,11 @@ function strikeTodo(index: number) {
 <style lang="scss" scoped>
 ul {
   list-style-type: none;
+  .todo-item {
+    &__text {
+      cursor: pointer;
+    }
+  }
 }
 
 </style>
