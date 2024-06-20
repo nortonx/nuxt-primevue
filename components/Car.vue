@@ -6,10 +6,10 @@
       class="car-image p-1"
     />
     <div class="car-info">
-      <div><span class="car-property font-bold">Model</span>: {{ props.carModel }}</div>
-      <div><span class="car-property font-bold">Plate</span>: <code>{{ props.carPlate }}</code></div>
-      <div><span class="car-property font-bold">Color</span>: <span class="car-property-value" :style="{ border: `2px solid ${props.carColor}`, paddingLeft: '2px', paddingRight: '2px' }">{{ props.carColor }}</span></div>
-      <div><span class="car-property font-bold">Owner</span>: {{ props.carOwner }}</div>
+      <div class="car-model"><span class="car-property font-bold">Model</span>: {{ props.carModel }}</div>
+      <div class="car-plate"><span class="car-property font-bold">Plate</span>: <code>{{ props.carPlate }}</code></div>
+      <div class="car-color"><span class="car-property font-bold">Color</span>: <span class="car-property-value" :style="{ border: `2px solid ${props.carColor}`, paddingLeft: '2px', paddingRight: '2px' }">{{ props.carColor }}</span></div>
+      <div class="car-owner"><span class="car-property font-bold">Owner</span>: {{ props.carOwner }}</div>
     </div>
     
   </div>

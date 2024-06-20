@@ -1,0 +1,23 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Car component > should render correctly and match snapshot 1`] = `
+"<div data-v-0a0a5ccd="" class="car-item border-1 border-round-sm p-2 w-2 flex flex-column justify-content-center align-items-center m-3"><img data-v-0a0a5ccd="" src="/assets/car-compact-svgrepo-com.svg" alt="Toyota" class="car-image p-1">
+  <div data-v-0a0a5ccd="" class="car-info">
+    <div data-v-0a0a5ccd="" class="car-model"><span data-v-0a0a5ccd="" class="car-property font-bold">Model</span>: Toyota</div>
+    <div data-v-0a0a5ccd="" class="car-plate"><span data-v-0a0a5ccd="" class="car-property font-bold">Plate</span>: <code data-v-0a0a5ccd="">ABC-1234</code></div>
+    <div data-v-0a0a5ccd="" class="car-color"><span data-v-0a0a5ccd="" class="car-property font-bold">Color</span>: <span data-v-0a0a5ccd="" class="car-property-value" style="border: 2px solid black; padding-left: 2px; padding-right: 2px;">black</span></div>
+    <div data-v-0a0a5ccd="" class="car-owner"><span data-v-0a0a5ccd="" class="car-property font-bold">Owner</span>: John Doe</div>
+  </div>
+</div>"
+`;
+
+exports[`Car component > should render correctly with props 1`] = `
+"<div data-v-0a0a5ccd="" class="car-item border-1 border-round-sm p-2 w-2 flex flex-column justify-content-center align-items-center m-3"><img data-v-0a0a5ccd="" src="/assets/car-compact-svgrepo-com.svg" alt="Toyota" class="car-image p-1">
+  <div data-v-0a0a5ccd="" class="car-info">
+    <div data-v-0a0a5ccd="" class="car-model"><span data-v-0a0a5ccd="" class="car-property font-bold">Model</span>: Toyota</div>
+    <div data-v-0a0a5ccd="" class="car-plate"><span data-v-0a0a5ccd="" class="car-property font-bold">Plate</span>: <code data-v-0a0a5ccd="">ABC-1234</code></div>
+    <div data-v-0a0a5ccd="" class="car-color"><span data-v-0a0a5ccd="" class="car-property font-bold">Color</span>: <span data-v-0a0a5ccd="" class="car-property-value" style="border: 2px solid black; padding-left: 2px; padding-right: 2px;">black</span></div>
+    <div data-v-0a0a5ccd="" class="car-owner"><span data-v-0a0a5ccd="" class="car-property font-bold">Owner</span>: John Doe</div>
+  </div>
+</div>"
+`;
