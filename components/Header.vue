@@ -7,9 +7,9 @@
       </svg>
     </template>
     <template #item="{ item }">
-      <NuxtLink :to="item.to">
+      <NuxtLink :to="item.to" class="p-1">
         <i :class="item.icon"></i>
-        <span class="ml-1 mr-5">{{ item.label }}</span>
+        <span class="mx-3">{{ item.label }}</span>
       </NuxtLink>
     </template>
   </Menubar>

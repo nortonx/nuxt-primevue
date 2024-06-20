@@ -1,10 +1,10 @@
 <template>
   <div class="main-layout p-3">
-    <Header />
+    <Header></Header>
     <main class="mt-3">
-      <slot />
+      <slot></slot>
     </main>
-    <Footer />
+    <Footer></Footer>
   </div>
 </template>
 
