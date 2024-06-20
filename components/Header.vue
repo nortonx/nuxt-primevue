@@ -1,15 +1,16 @@
 <template>
   <Menubar :model="items">
     <template #start>
-      <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="..." fill="var(--p-text-color)" />
-          <path d="..." fill="transparent" />
+      <svg width="35" height="40" viewBox="0 0 35 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-8">
+        <path d="..." fill="var(--p-primary-color)" />
+        <path d="..." fill="var(--p-text-color)" />
       </svg>
     </template>
-    <template #item="{ item }">
-      <NuxtLink :to="item.to" class="p-1">
-        <i :class="item.icon"></i>
-        <span class="mx-3">{{ item.label }}</span>
+    <template #item="{ item, props, root }">
+      <NuxtLink :to="item.to" class="flex items-center" v-bind="props.action">
+        <span :class="item.icon"></span>
+        <span class="item-label ml-2">{{ item.label }}</span>
+        <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
       </NuxtLink>
     </template>
   </Menubar>
