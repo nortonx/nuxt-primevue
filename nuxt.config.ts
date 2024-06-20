@@ -36,6 +36,6 @@ export default defineNuxtConfig({
     'primeicons/primeicons.css'
   ],
   devServer: {
-    port: 8000,
+    port: 3080,
   },
 })
