@@ -1,7 +1,7 @@
 <template>
   <div class="border-round-xs border-1 p-3">
     <h1 class="text-center">Parking</h1>
-    <div class="flex flex-wrap justify-content-center">
+    <div v-if="data" class="flex flex-wrap justify-content-center">
       <car 
         v-for="car in data"
         :key="car.plate"
@@ -11,11 +11,13 @@
         :car-owner="car.user.name"
       ></car>
     </div>
+    <div v-else class="flex flex-wrap justify-content-center">
+      <div class="text-center">Could not load content :-(</div>
+    </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-// import carData from "@/data/carData.json"
 
 const API_URL = "http://localhost:8000"
 
