@@ -16,4 +16,5 @@ echo "project root: ${project_root}"
 echo "compose file: $COMPOSE_FILE"
 echo "compose project name: $COMPOSE_PROJECT_NAME"
 
-docker-compose up -d && docker-compose exec app /bin/bash -l "$@"
+docker-compose up 
+# -d && docker-compose exec nuxt-primevue /bin/bash -l "$@"
