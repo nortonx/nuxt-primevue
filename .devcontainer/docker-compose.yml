@@ -6,7 +6,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      target: dev
     volumes:
       - type: bind
         source: ..
@@ -14,7 +13,7 @@ services:
       - type: bind
         source: ${HOME}${USERPROFILE}/.ssh
         target: /home/developer/.ssh
-      - notused:/opt/app/node_modules
+
     working_dir: /workspace
     command: sleep infinity
     environment:
@@ -24,5 +23,4 @@ services:
       - "3080:3080"
       - "9229:9229"
       - "9230:9230"
-  volumes:
-    notused:
+
