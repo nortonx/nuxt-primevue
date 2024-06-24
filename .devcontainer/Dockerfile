@@ -4,7 +4,9 @@ ARG NODE_ENV=development
 ENV NODE_ENV $NODE_ENV
 
 # Define application directory
-RUN mkdir /opt/app && chown node:node /opt/app
+RUN mkdir /opt/app && chown node:node /opt/app \
+    && mkdir /opt/app/node_modules && chown node:node /opt/app/node_modules \
+    apk update && apt-upgrade && apk add git
 WORKDIR /opt/app
 
 # Install dependencies in a non-default location to avoid clashing
@@ -23,14 +25,6 @@ EXPOSE $PORT 9229 9230
 
 COPY devcontainer-frontend-load-profile.sh /etc/profile.d/
 
-# ARG USERNAME=developer
-# ARG USER_UID=1000
-# ARG USER_GID=$USER_UID
-
-# RUN groupadd --gid "$USER_GID" "$USERNAME" \
-#   && useradd -s /bin/bash --uid "$USER_UID" --gid "$USER_GID" -m "$USERNAME"
-
-# USER $USERNAME
 
 # Run the application
 WORKDIR /opt/app
