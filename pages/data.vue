@@ -1,7 +1,7 @@
 <template>
-  <div class="px-4 py-8 md:px-6 lg:px-8">
-    <div class="text-900 font-bold text-6xl mb-4 text-center">Data List {{ searchTerm }}</div>
-    <div class="text-700 font-bold text-2xl mb-4 text-center">Filtered data length: {{ filteredData.length }}</div>
+  <div class="px-4 py-4 md:px-6 lg:px-8">
+    <h1 class="mb-4 text-center">Data List {{ searchTerm }}</h1>
+    <h2 class="text-700 font-bold text-2xl mb-4 text-center">Filtered data length: {{ filteredData.length }}</h2>
     <div class="grid">
       <div class="col-12">
         <div class="shadow-2 p-4 h-full flex flex-column surface-card ">

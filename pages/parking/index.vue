@@ -14,6 +14,7 @@
     <div v-else class="flex flex-wrap justify-content-center">
       <div class="text-center">Could not load content :-(</div>
     </div>
+
   </div>
 </template>
 
@@ -21,15 +22,11 @@
 import type { Car } from "@/types/car.type"
 
 const API_URL = "http://localhost:8000"
-
 const { data, error } = useFetch<Car[]>(`${API_URL}/cars`)
-
 const carData = data
 
 onMounted(() => {
   console.log(carData)
 })
-
-
 
 </script>

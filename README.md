@@ -26,7 +26,7 @@ bun install
 
 ## Development Server
 
-Start the development server on `http://localhost:3000`:
+Start the development server on `http://localhost:3080`:
 
 ```bash
 # npm
@@ -77,3 +77,6 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+# .devcontainer info:
+Check it out at [https://github.com/BT-Creator/nuxt-devcontainer/blob/master/docker-compose.yml](https://github.com/BT-Creator/nuxt-devcontainer/blob/master/docker-compose.yml)

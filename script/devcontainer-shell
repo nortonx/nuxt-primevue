@@ -1,0 +1,20 @@
+#!/bin/bash
+project_root=$(dirname "${BASH_SOURCE[0]}")/..
+
+echo "Testing project_root..."
+if [ -e ${project_root}/.env ]; then
+  source ${project_root}/.env
+fi
+
+# Copy package.json to .devcontainer since the command was not working on dockerfile.
+cp ${project_root}/package.json ${project_root}/.devcontainer/package.json
+
+export COMPOSE_FILE=${COMPOSE_FILE:-${project_root}/.devcontainer/docker-compose.yml}
+export COMPOSE_PROJECT_NAME=${COMPOSE_PROJECT_NAME:-nuxt-primevue}
+
+echo "project root: ${project_root}"
+echo "compose file: $COMPOSE_FILE"
+echo "compose project name: $COMPOSE_PROJECT_NAME"
+
+docker-compose up 
+# -d && docker-compose exec nuxt-primevue /bin/bash -l "$@"
