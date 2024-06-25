@@ -5,7 +5,7 @@
         <h1 class="text-4xl font-bold text-center mb-4">Word Counter</h1>
         <p class="text-center text-800">Enter your text below to count the number of words.</p>
       </div>
-      <div class="col-12">
+      <div class="col-8 col-offset-2">
         <Textarea
           v-model="content"
           rows="8"

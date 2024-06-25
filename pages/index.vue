@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-nogutter surface-section text-800">
-    <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center">
+    <div class="lg:col-6 md:col-6 p-6 text-center md:text-left flex align-items-center">
       <section>
         <span class="block text-6xl font-bold mb-1">Create the screens your</span>
         <div class="text-6xl text-primary font-bold mb-3">visitors deserve to see</div>
@@ -22,7 +22,7 @@
         </Dialog>
       </section>
     </div>
-    <div class="col-12 md:col-6 overflow-hidden">
+    <div class="lg:col-6 md:col-6 overflow-hidden">
       <img 
         src="/images/AI_generated_2.jpeg"
         alt="Woman looking right"

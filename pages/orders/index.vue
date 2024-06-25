@@ -2,7 +2,7 @@
   <div class="p-4 md:px-6 lg:px-8">
     <h1 class="mb-4 text-center">Checkout</h1>
     <div class="grid">
-      <div class="col-12">
+      <div class="col-10 col-offset-1">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <DataTable
             ref="dt"
@@ -17,7 +17,7 @@
           </DataTable>
         </div>
       </div>
-      <div class="col-12">
+      <div class="col-10 col-offset-1">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <div class="flex justify-content-between mx-8">
             <div class="text-900 font-bold text-xl">Total</div>

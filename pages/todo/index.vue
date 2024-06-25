@@ -2,7 +2,7 @@
   <div class="p-4 md:px-6 lg:px-8">
     <h1 class="mb-4 text-center">TO-DO List</h1>
     <div class="grid">
-      <div class="col-12 ">
+      <div class="col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <InputText 
             placeholder="What needs to be done?" 
@@ -14,7 +14,7 @@
           <Button label="Add" class="w-full mt-3" @click="addTodo"></Button>
         </div>
       </div>
-      <div class="col-12">
+      <div class="col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <div class="flex flex-column mx-4">
             <div class="text-900 font-bold text-xl text-center" v-if="emptyList">No items in the list</div>
@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12">
+      <div class="col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <div class="flex justify-content-between mx-4">
             <div class="text-900 font-bold text-xl">Total: {{ todoStore.todos.length }}</div>
