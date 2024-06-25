@@ -5,7 +5,8 @@ ENV NODE_ENV $NODE_ENV
 
 # Define application directory
 RUN mkdir /opt/app && chown node:node /opt/app \
-    && mkdir /opt/app/node_modules && chown node:node /opt/app/node_modules
+    && mkdir /opt/app/node_modules && chown node:node /opt/app/node_modules \
+    && apk add --no-cache bash
 WORKDIR /opt/app
 
 # Install dependencies in a non-default location to avoid clashing
@@ -27,5 +28,5 @@ COPY devcontainer-frontend-load-profile.sh /etc/profile.d/
 
 # Run the application
 WORKDIR /opt/app
-CMD ["npm", "run", "dev"]
-
+CMD ["yarn", "run", "dev"]
+ 
