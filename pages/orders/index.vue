@@ -1,6 +1,6 @@
 <template>
-  <div class="px-4 py-8 md:px-6 lg:px-8">
-    <div class="text-900 font-bold text-6xl mb-4 text-center">Checkout</div>
+  <div class="p-4 md:px-6 lg:px-8">
+    <h1 class="mb-4 text-center">Checkout</h1>
     <div class="grid">
       <div class="col-12">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
@@ -31,8 +31,6 @@
 
 <script setup lang="ts">
 import { type Product } from "@/types/product.type"
-
-
 
 const products: Product[] = [
   {

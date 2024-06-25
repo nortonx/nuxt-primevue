@@ -5,8 +5,7 @@ ENV NODE_ENV $NODE_ENV
 
 # Define application directory
 RUN mkdir /opt/app && chown node:node /opt/app \
-    && mkdir /opt/app/node_modules && chown node:node /opt/app/node_modules \
-    apk update && apt-upgrade && apk add git
+    && mkdir /opt/app/node_modules && chown node:node /opt/app/node_modules
 WORKDIR /opt/app
 
 # Install dependencies in a non-default location to avoid clashing
