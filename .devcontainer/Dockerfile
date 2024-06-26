@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.20
+FROM node:18.20-slim
 
 ARG NODE_ENV=development
 ENV NODE_ENV $NODE_ENV
@@ -6,7 +6,8 @@ ENV NODE_ENV $NODE_ENV
 # Define application directory
 RUN mkdir /opt/app && chown node:node /opt/app \
     && mkdir /opt/app/node_modules && chown node:node /opt/app/node_modules \
-    && apk add --no-cache bash
+    && apt-get update && apt-get install -y vim \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 WORKDIR /opt/app
 
 # Install dependencies in a non-default location to avoid clashing
