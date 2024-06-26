@@ -14,7 +14,7 @@ services:
       #   source: ${HOME}${USERPROFILE}/.ssh
       #   target: /home/node/.ssh
     working_dir: /workspace
-    command: sleep infinity # npm run dev
+    command: npm run dev
     environment:
       # BUNDLE_PATH: vendor/bundle
       INTERFACE: "0.0.0.0"

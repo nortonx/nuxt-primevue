@@ -6,7 +6,7 @@ ENV NODE_ENV $NODE_ENV
 # Define application directory
 RUN mkdir /opt/app && chown node:node /opt/app \
     && mkdir /opt/app/node_modules && chown node:node /opt/app/node_modules \
-    && apt-get update && apt-get install -y vim \
+    && apt-get update && apt-get install -y vim bash \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 WORKDIR /opt/app
 
@@ -19,15 +19,9 @@ ENV PATH /opt/app/node_modules/.bin:$PATH
 
 # Exposing Web and Debug ports for the application
 ARG PORT=3080
-ARG HOST=0
-ENV PORT $PORT
+ARG HOST=0.0.0.0
+ENV PORT=$PORT
 ENV HOST=$HOST
 EXPOSE $PORT 9229 9230
 
 COPY devcontainer-frontend-load-profile.sh /etc/profile.d/
-
-
-# Run the application
-WORKDIR /opt/app
-CMD ["yarn", "run", "dev"]
- 
