@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 md:col-6 lg:col-3">
+  <div class="md:col-3 lg:col-3">
     <div class="surface-card shadow-2 p-3 border-round">
       <div class="flex justify-content-between md-3">
         <div>

@@ -1,6 +1,6 @@
 <template>
-  <div class="surface-section px-4 py-8 md:px-6 lg:px-8">
-    <div class="text-700">
+  <div class="grid surface-section px-4 py-8 md:px-6 lg:px-8">
+    <div class="text-700 col-8 col-offset-2">
       <div class="text-blue-600 font-bold mb-3 text-3xl text-center"><i class="pi pi-prime"></i>&nbsp;POWERED BY PrimeVue</div>
       <div class="text-700 text-2xl mb-5">
         <h2 class="text-center">This website was built using a powerful combination of cutting-edge technologies:</h2>
