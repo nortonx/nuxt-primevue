@@ -3,7 +3,7 @@
     <h1 class="mb-4 text-center">Data List {{ searchTerm }}</h1>
     <h2 class="text-700 font-bold text-2xl mb-4 text-center">Filtered data length: {{ filteredData.length }}</h2>
     <div class="grid">
-      <div class="col-12">
+      <div class="col-8 col-offset-2">
         <div class="shadow-2 p-4 h-full flex flex-column surface-card ">
           <IconField iconPosition="left">
             <InputIcon class="pi pi-search"></InputIcon>
@@ -17,7 +17,7 @@
           </IconField>
         </div>
       </div>
-      <div class="col-12">
+      <div class="col-8 col-offset-2">
         <DataTable :value="filteredData" :paginator="true" :rows="10" :rowsPerPageOptions="[5, 10, 20]">
           <Column field="ACT Symbol" header="ACT Symbol" sortable></Column>
           <Column field="NASDAQ Symbol" header="NASDAQ Symbol" sortable></Column>

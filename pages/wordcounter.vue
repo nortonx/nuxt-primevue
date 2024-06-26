@@ -14,11 +14,14 @@
           class="w-full border-round shadow-2 p-3 text-800"
         ></Textarea>
       </div>
+      <div class="col-8 col-offset-2 flex">
+
+        <CounterBox :counter="words" label="Words" />
+        <CounterBox :counter="characters" label="Characters" />
+        <CounterBox :counter="phrases" label="Phrases" />
+        <CounterBox :counter="paragraphs" label="Paragraphs" />
+      </div>
       
-      <CounterBox :counter="words" label="Words" />
-      <CounterBox :counter="characters" label="Characters" />
-      <CounterBox :counter="phrases" label="Phrases" />
-      <CounterBox :counter="paragraphs" label="Paragraphs" />
     </div>
   </div>
 </template>

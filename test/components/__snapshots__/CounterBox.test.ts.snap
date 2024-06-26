@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`CounterBox component > should render correctly and match snapshot 1`] = `
-"<div class="col-12 md:col-6 lg:col-3">
+"<div class="md:col-3 lg:col-3">
   <div class="surface-card shadow-2 p-3 border-round">
     <div class="flex justify-content-between md-3">
       <div><span class="block text-500 font-medium mb-3 label">Words</span>
