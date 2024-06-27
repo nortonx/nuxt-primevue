@@ -57,6 +57,11 @@ const items = computed(() => [
     to: "/parking"
   },
   {
+    label: "Slideshow",
+    icon: "pi pi-fw pi-images",
+    to: "/slideshow"
+  },
+  {
     label: "About",
     icon: "pi pi-fw pi-info",
     to: "/about"

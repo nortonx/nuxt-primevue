@@ -24,11 +24,12 @@
       </section>
     </div>
     <div class="lg:col-6 md:col-6 overflow-hidden">
-      <img 
+      <Image
         src="/images/AI_generated_2.jpeg"
         alt="Funko-like developer image"
         class="md:ml-auto block md:h-full"
         style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)"
+        preview
       />
     </div>
   </div>
@@ -37,6 +38,7 @@
 <script setup lang="ts">
 import Button from "primevue/button"
 import Dialog from "primevue/dialog"
+import Image from "primevue/image"
 
 const isVisible = ref(false)
 
