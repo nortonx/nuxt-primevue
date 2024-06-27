@@ -9,7 +9,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "test:watch": "vitest --watch --reporter=verbose",
-    "test:unit": "vitest --run --reporter=verbose",
+    "test": "vitest --run --reporter=verbose",
     "test:coverage": "vitest --run --coverage",
     "test:updateSnapshots": "vitest --run -u"
   },
