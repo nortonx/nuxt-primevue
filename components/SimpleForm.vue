@@ -77,6 +77,14 @@
       <Button label="Sign Up" @click="submitForm"></Button>
     </div>
   </div>
+  <div class="card" v-if="formStore.records">
+    <h2 class="text-2xl font-bold text-center">Form Data</h2>
+    <ul>
+      <li v-for="record in formStore.records" :key="record.phone">
+        <code>{{ record }}</code>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -85,6 +93,7 @@ import InputMask from "primevue/inputmask"
 import { type FormData } from "@/types/formData.type"
 import { useVuelidate } from "@vuelidate/core"
 import { required, email, minLength, helpers } from "@vuelidate/validators"
+import { useFormStore } from "@/stores/form.store"
 
 const formData = ref<FormData>({
   firstName: "",
@@ -94,6 +103,8 @@ const formData = ref<FormData>({
   phone: "",
   country: ""
 })
+
+const formStore = useFormStore()
 
 const isFormValid = ref(false)
 
@@ -129,6 +140,7 @@ async function submitForm() {
   if (!isFormValid.value) {
     console.log("Form is not valid")
   }
+  formStore.add(formData.value)
 }
 
 </script>
