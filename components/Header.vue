@@ -10,7 +10,7 @@
       <NuxtLink :to="item.to" class="flex items-center" v-bind="props.action">
         <span :class="item.icon"></span>
         <span class="item-label ml-2">{{ item.label }}</span>
-        <Badge v-if="item.badge" :class="{ 'ml-auto': !root, 'ml-2': root }" :value="item.badge" />
+
       </NuxtLink>
     </template>
   </Menubar>
