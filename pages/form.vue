@@ -1,5 +1,5 @@
 <template>
-  <div class="px-4 py-8 md:px-6 lg:px-8">
+  <div class="p-4 md:px-6 lg:px-8">
     <div class="flex justify-content-center">
       <div class="col-10 col-offset-1">
         <div class="surface-card p-4 shadow-2 border-round w-full">
