@@ -6,12 +6,12 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test:watch": "vitest --watch --reporter=verbose",
-    "test": "vitest --run --reporter=verbose",
+    "preview": "nuxt preview",
     "test:coverage": "vitest --run --coverage",
-    "test:updateSnapshots": "vitest --run -u"
+    "test:updateSnapshots": "vitest --run -u",
+    "test:watch": "vitest --watch --reporter=verbose",
+    "test": "vitest --run --reporter=verbose"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
@@ -31,7 +31,6 @@
     "@vitest/coverage-v8": "^1.6.0",
     "@vue/test-utils": "^2.4.6",
     "eslint": "^9.5.0",
-    "happy-dom": "^14.12.3",
     "jsdom": "^24.1.0",
     "nuxt-primevue": "^3.0.0",
     "playwright-core": "^1.44.1",
