@@ -74,17 +74,37 @@
       </code>
     </div>
     <div class="field col-12 action-row flex justify-content-center">
-      <Button label="Sign Up" @click="submitForm"></Button>
+      <Button label="Add User to List" @click="submitForm"></Button>
     </div>
   </div>
-  <div class="card" v-if="formStore.records">
-    <h2 class="text-2xl font-bold text-center">Form Data</h2>
-    <ul>
-      <li v-for="record in formStore.records" :key="record.phone">
-        <code>{{ record }}</code>
-      </li>
-    </ul>
-  </div>
+  <Panel header="List of users">
+    <div class="card" v-if="formStore.records">
+      <ul class="user-list list-none p-0 flex flex-wrap">
+        <li v-for="(record, index) in formStore.records" :key="record.phone" class="user-card m-3 w6">
+          <Card>
+            <template #title>{{ `${index + 1} - ${record.firstName} ${record.lastName}` }}</template>
+            <template #content>
+              <div class="row">
+                <span class="label font-bold">Email: </span>
+                <span class="value">{{ record.email }}</span>
+              </div>
+              <div class="row">
+                <span class="label font-bold">Phone: </span>
+                <span class="value">{{ record.phone }}</span> 
+              </div>
+              <div class="row">
+                <span class="label font-bold">Country: </span>
+                <span class="value">{{ record.country.name }}</span>
+              </div>
+              <div class="row mt-4 flex justify-content-end">
+                <Button label="Delete" icon="pi pi-times" class="p-button-danger" @click="formStore.remove(index)"></Button>
+              </div>
+            </template>
+          </Card>
+        </li>
+      </ul>
+    </div>
+  </Panel>
 </template>
 
 <script setup lang="ts">
@@ -94,6 +114,9 @@ import { type FormData } from "@/types/formData.type"
 import { useVuelidate } from "@vuelidate/core"
 import { required, email, minLength, helpers } from "@vuelidate/validators"
 import { useFormStore } from "@/stores/form.store"
+import Panel from "primevue/panel"
+import Card from "primevue/card"
+import type { CountryType } from "@/types/country.type"
 
 const formData = ref<FormData>({
   firstName: "",
@@ -101,7 +124,8 @@ const formData = ref<FormData>({
   email: "",
   password: "",
   phone: "",
-  country: ""
+  country: { name: "", code: "" }
+  
 })
 
 const formStore = useFormStore()
@@ -121,7 +145,7 @@ const rules = {
 
 const $v = useVuelidate(rules, { formData })
 
-const countries = ref([
+const countries = ref<CountryType[]>([
   { name: 'Australia', code: 'AU' },
   { name: 'Brazil', code: 'BR' },
   { name: 'Canada', code: 'CA' },
@@ -139,8 +163,25 @@ async function submitForm() {
   isFormValid.value = await $v.value.$validate()
   if (!isFormValid.value) {
     console.log("Form is not valid")
+    return
   }
-  formStore.add(formData.value)
+
+  if (JSON.stringify(formData.value) !== JSON.stringify(formStore.lastRecord)) {
+    formStore.add(formData.value)
+    resetForm()
+  }
+}
+
+function resetForm() {
+  formData.value = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    phone: "",
+    country: { name: "", code: "" }
+  }
+  $v.value.$reset()
 }
 
 </script>
