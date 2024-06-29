@@ -73,7 +73,6 @@ import TabView from "primevue/tabview"
 import TabPanel from "primevue/tabpanel"
 import Image from "primevue/image"
 import Carousel from "primevue/carousel"
-import Card from "primevue/card"
 
 const images = ref()
 
