@@ -1,15 +1,14 @@
 import { defineStore } from "pinia"
 import { ref, computed } from "vue"
-
-import type { FormRecord } from "@/types/formRecord.type"
+import type { FormData } from "@/types/formData.type"
 
 export const useFormStore = defineStore('form', () =>{
-  const records = ref<FormRecord[]>([] as FormRecord[])
+  const records = ref<FormData[]>([] as FormData[])
   const totalRecords = computed(() => records.value.length)
   const isEmpty = computed(() => records.value.length === 0)
   const lastRecord = computed(() => records.value[records.value.length - 1])
 
-  function add(record: FormRecord) {
+  function add(record: FormData) {
     records.value.push(record)
   }
 
