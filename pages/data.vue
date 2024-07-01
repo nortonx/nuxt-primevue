@@ -35,7 +35,7 @@ import { type Ticker } from "@/types/ticker.type"
 
 const searchField = ref(null)
 const searchTerm = ref("")
-const jsonData = ref<Ticker[]>(rawJsonData)
+const jsonData = shallowRef<Ticker[]>(rawJsonData)
 
 // computed
 const filteredData = computed(() => {
