@@ -1,0 +1,16 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Form page > should render correctly and match snapshot 1`] = `
+"<div class="p-4 md:px-6 lg:px-8">
+  <div class="flex justify-content-center">
+    <div class="col-10 col-offset-1">
+      <div class="surface-card p-4 shadow-2 border-round w-full">
+        <div class="text-center mb-5">
+          <div class="text-900 text-3xl font-medium mb-3">Sign Up</div><span class="text-600 font-medium line-height-3">(For demo purposes only)</span>
+        </div>
+        <simple-form-stub></simple-form-stub>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
