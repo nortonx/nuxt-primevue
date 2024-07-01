@@ -5,25 +5,25 @@
         <h1 class="text-4xl font-bold text-center mb-4">Slideshow</h1>
         <p class="text-center text-800">This is a simple slideshow created using PrimeVue components.</p>
         <TabView>
-          <TabPanel header="Slideshow">
-            <div class="card">
+          <TabPanel header="Slideshow Component">
+            <div class="card col-8 col-offset-2">
               <Galleria
                 :value="images"
                 :responsiveOptions="responsiveOptions"
                 :numVisible="3"
                 :circular="true"
-                
+
               >
                 <template #item="slotProps">
                   <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" class="w-full" />
                 </template>
                 <template #thumbnail="slotProps">
-                  <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" class="w-full " />
+                  <img :src="slotProps.item.itemImageSrc" :alt="slotProps.item.alt" class="w-full" />
                 </template>
               </Galleria>
             </div>
           </TabPanel>
-          <TabPanel header="Image">
+          <TabPanel header="Image Component">
             <div class="card">
               <Image v-for="image in images" :key="image.src" preview class="w-3 m-1">
                 <template #indicatoricon>
@@ -38,7 +38,7 @@
               </Image>
             </div>
           </TabPanel>
-          <TabPanel header="Carousel">
+          <TabPanel header="Carousel Component">
             <Carousel :value="images" :numVisible="3" :numScroll="3" :responsiveOptions="responsiveOptionsCarousel">
               <template #item="slotProps">
                 <div class="border-1 surface-border border-round m-2 p-3">
@@ -121,22 +121,22 @@ const responsiveOptions = ref([
 const responsiveOptionsCarousel = ref([
   {
     breakpoint: "1400px",
-    numVisible: 2,
+    numVisible: 3,
     numScroll: 1
   },
   {
     breakpoint: "1199px",
     numVisible: 3,
-    numScroll: 1
+    numScroll: 2
   },
   {
     breakpoint: "767px",
-    numVisible: 2,
+    numVisible: 3,
     numScroll: 1
   },
   {
     breakpoint: "575px",
-    numVisible: 1,
+    numVisible: 2,
     numScroll: 1
   }
 ])

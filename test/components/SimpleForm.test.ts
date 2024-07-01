@@ -4,14 +4,15 @@ import SimpleForm from '@/components/SimpleForm.vue'
 import { createTestingPinia } from '@pinia/testing'
 
 describe('SimpleForm component', () => {
-
-  it('it should render correctly and match snapshot', () => {
-    const wrapper = shallowMount(SimpleForm, {
+  let wrapper: any
+  beforeEach(() => {
+    wrapper = shallowMount(SimpleForm, {
       global: {
         plugins: [createTestingPinia()]
       }
     })
-    
+  })
+  it('it should render correctly and match snapshot', () => {
     expect(wrapper.html()).toMatchSnapshot()
   });
 })
