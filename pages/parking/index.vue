@@ -4,7 +4,7 @@
     <div class="grid">
       <div class="col-8 col-offset-2">
         <div class="shadow-2 p-4 h-full flex flex-column surface-card border-round-md">
-          <div v-if="carData" class="flex flex-wrap justify-content-center">
+          <div v-if="Array.isArray(carData)" class="flex flex-wrap justify-content-center">
             <car 
               v-for="car in carData"
               :key="car.plate"
@@ -31,7 +31,7 @@ const { data, error } = useFetch<Car[]>(`${API_URL}/cars`)
 const carData = data
 
 onMounted(() => {
-  if (data) {
+  if (Array.isArray(data)) {
     console.log("Data from parking-api:", carData)
   }
 })
