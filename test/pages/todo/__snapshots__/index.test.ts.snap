@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Todo page > should render correctly and match snapshot 1`] = `
+"<div data-v-7167769e="" class="p-4 md:px-6 lg:px-8">
+  <h1 data-v-7167769e="" class="mb-4 text-center">TO-DO List</h1>
+  <div data-v-7167769e="" class="grid">
+    <div data-v-7167769e="" class="col-8 col-offset-2">
+      <div data-v-7167769e="" class="shadow-2 p-3 h-full flex flex-column surface-card">
+        <input-text-stub data-v-7167769e="" placeholder="What needs to be done?" class="w-full" modelvalue="" variant="filled"></input-text-stub>
+        <button-stub data-v-7167769e="" label="Add" class="w-full mt-3"></button-stub>
+      </div>
+    </div>
+    <div data-v-7167769e="" class="col-8 col-offset-2">
+      <div data-v-7167769e="" class="shadow-2 p-3 h-full flex flex-column surface-card">
+        <div data-v-7167769e="" class="flex flex-column mx-4">
+          <div data-v-7167769e="" class="text-900 font-bold text-xl text-center">No items in the list</div>
+        </div>
+      </div>
+    </div>
+    <div data-v-7167769e="" class="col-8 col-offset-2">
+      <div data-v-7167769e="" class="shadow-2 p-3 h-full flex flex-column surface-card">
+        <div data-v-7167769e="" class="flex justify-content-between mx-4">
+          <div data-v-7167769e="" class="text-900 font-bold text-xl">Total: 0</div>
+          <div data-v-7167769e="" class="text-900 font-bold text-xl">Completed: 0</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>"
+`;
