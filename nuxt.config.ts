@@ -41,6 +41,16 @@ export default defineNuxtConfig({
         'IconField',
         'InputIcon',
         'Menubar',
+        'Textarea',
+        'Galleria',
+        'TabView',
+        'TabPanel',
+        'Card',
+        'Dialog',
+        'Carousel',
+        'Image',
+        'Dropdown',
+        'InputMask',
       ]
     }
   },
