@@ -10,8 +10,9 @@
             v-model="todo"
             @keydown.enter="addTodo"
             variant="filled"
+            data-test="todo-input"
           ></InputText>
-          <Button label="Add" class="w-full mt-3" @click="addTodo"></Button>
+          <Button label="Add" class="w-full mt-3" @click="addTodo" data-test="add-todo"></Button>
         </div>
       </div>
       <div class="col-8 col-offset-2">
@@ -25,6 +26,7 @@
                   @click="strikeTodo(index)"
                   :style="todo.completed ? 'text-decoration: line-through' : 'text-decoration: none'"
                   class="my-2 todo-item__text"
+                  :data-test="`todo-item-${index}`"
                 >
                   {{ todo.title }}
                 </div>

@@ -6,7 +6,14 @@
         <div class="text-6xl text-primary font-bold mb-3">Vue.js Frontend Developer</div>
         <p class="mt-0 mb-4 text-700 line-height-3">This is a landing page created using PrimeBlocks and PrimeVue, for demo purposes. Feel free to click on the links above and see the examples.</p>
             
-        <Button label="Toggle Dialog Example" type="button" class="mr-3 p-button-raised" @click="toggleDialog"></Button>
+        <Button 
+          label="Toggle Dialog Example"
+          type="button" 
+          class="mr-3 p-button-raised" 
+          @click="toggleDialog"
+          data-test="toggle-dialog-button"
+        >
+        </Button>
         <Button label="Look, that's an AI generated image" type="button" icon="pi pi-arrow-right" class="p-button-outlined mt-2"></Button>
         <Dialog 
           v-model:visible="isVisible"
@@ -16,8 +23,9 @@
           close-on-escape
           @onHide="isVisible = false"
           :style="{ width: '50vw' }"
+          data-test="dialog"
         >
-          <p>The content presented here were implemented based on code challenges from recruiting proccess that I was part of. Also, there are challenges that are
+          <p data-test="dialog-text">The content presented here were implemented based on code challenges from recruiting proccess that I was part of. Also, there are challenges that are
             in progress suck as the parking feature, which is based on an app we used on another company I used to work for.</p>
           <i class="pi pi-spin pi-cog" style="font-size: 2rem"></i>
         </Dialog>
@@ -30,6 +38,7 @@
         class="md:ml-auto block md:h-full"
         style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)"
         preview
+        data-test="ai-image"
       />
     </div>
   </div>
