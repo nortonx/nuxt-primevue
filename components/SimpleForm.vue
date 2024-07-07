@@ -2,11 +2,12 @@
   <div class="formgrid grid">
     <div class="field col-12 md:col-6">
       <label for="firstName" class="block text-900 font-medium mb-1">First Name</label>
-      <InputText 
-        id="firstName" 
-        v-model="formData.firstName" 
-        class="w-full mb-2" 
-        @blur="$v.formData.firstName.$touch" 
+      <InputText
+        id="firstName"
+        v-model="formData.firstName"
+        class="w-full mb-2"
+        @blur="$v.formData.firstName.$touch"
+        data-test="firstName"
       />
       <span v-show="$v.formData.firstName.$error" class="error-message">{{ $v.formData.firstName.required.$message }}</span>
     </div>
@@ -17,6 +18,7 @@
         v-model="formData.lastName" 
         class="w-full mb-2"
         @blur="$v.formData.lastName.$touch"
+        data-test="lastName"
       />
       <span v-show="$v.formData.lastName.$error" class="error-message">{{ $v.formData.lastName.required.$message }}</span>
     </div>
@@ -27,6 +29,7 @@
         v-model="formData.email" 
         class="w-full mb-2"
         @blur="$v.formData.email.$touch"
+        data-test="email"
       />
       <span v-show="$v.formData.email.$error" class="error-message">{{ $v.formData.email.required.$message }}</span>
     </div>
@@ -39,6 +42,7 @@
         v-model="formData.phone" 
         class="w-full mb-2"
         @blur="$v.formData.phone.$touch"
+        data-test="phone"
       />
       <span v-show="$v.formData.phone.$error" class="error-message">{{ $v.formData.phone.required.$message }}</span>
     </div>
@@ -50,6 +54,7 @@
         v-model="formData.password" 
         class="w-full mb-2"
         @blur="$v.formData.password.$touch"
+        data-test="password"
       />
       <span v-show="$v.formData.password.$error" class="error-message">{{ $v.formData.password.required.$message }}</span>
     </div>
@@ -62,8 +67,8 @@
         optionLabel="name"
         placeholder="Select a Country"
         class="w-full mb-2"
+        data-test="country"
       />
-      <span v-show="$v.formData.country.$error" class="error-message">{{ $v.formData.country.required.$message }}</span>
     </div>
     <div class="errors">
       <code>
@@ -74,11 +79,11 @@
       </code>
     </div>
     <div class="field col-12 action-row flex justify-content-center">
-      <Button label="Add User to List" @click="submitForm"></Button>
+      <Button label="Add User to List" @click="submitForm" data-test="submit-form"></Button>
     </div>
   </div>
   <Panel header="List of users">
-    <div class="card" v-if="formStore.records">
+    <div class="card" v-if="formStore.records" data-test="records">
       <ul class="user-list list-none p-0 flex flex-wrap">
         <li v-for="(record, index) in formStore.records" :key="record.phone" class="user-card m-3 w6">
           <Card>
