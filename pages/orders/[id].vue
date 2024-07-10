@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { type Product } from "@/types/product.type"
+import type { Product } from "@/types/product.type"
 import { onMounted } from "vue"
 
 
