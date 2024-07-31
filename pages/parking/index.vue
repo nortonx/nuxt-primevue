@@ -3,9 +3,14 @@
     <h1 class="mb-4 text-center">Parking ({{ API_URL }})</h1>
     <div class="grid">
       <div class="col-8 col-offset-2">
-        <div class="shadow-2 p-4 h-full flex flex-column surface-card border-round-md">
-          <div v-if="Array.isArray(carData)" class="flex flex-wrap justify-content-center">
-            <car 
+        <div
+          class="shadow-2 p-4 h-full flex flex-column surface-card border-round-md"
+        >
+          <div
+            v-if="Array.isArray(carData)"
+            class="flex flex-wrap justify-content-center"
+          >
+            <car
               v-for="car in carData"
               :key="car.plate"
               :car-model="car.model"
@@ -24,16 +29,15 @@
 </template>
 
 <script lang="ts" setup>
-import type { Car } from "@/types/car.type"
+import type { Car } from "@/types/car.type";
 
-const API_URL = import.meta.env.VITE_PARKING_API_URL as string
-const { data, error } = useFetch<Car[]>(`${API_URL}/cars`)
-const carData = data
+const API_URL = import.meta.env.VITE_PARKING_API_URL as string;
+const { data, error } = useFetch<Car[]>(`${API_URL}/cars`);
+const carData = data;
 
 onMounted(() => {
   if (Array.isArray(data)) {
-    console.log("Data from parking-api:", carData)
+    console.log("Data from parking-api:", carData);
   }
-})
-
+});
 </script>

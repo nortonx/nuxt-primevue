@@ -4,11 +4,7 @@
     <div class="grid">
       <div class="col-10 col-offset-1">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
-          <DataTable
-            ref="dt"
-            :value="products"
-            dataKey="id"
-          >
+          <DataTable ref="dt" :value="products" dataKey="id">
             <Column field="name" header="Name"></Column>
             <Column field="price" header="Price"></Column>
             <Column field="quantity" header="Quantity"></Column>
@@ -30,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import { type Product } from "@/types/product.type"
+import { type Product } from "@/types/product.type";
 
 const products: Product[] = [
   {
@@ -39,7 +35,11 @@ const products: Product[] = [
     price: 3,
     quantity: 4,
     discount: "2%",
-    subtotal: computed(() => products[0].price * products[0].quantity - (products[0].price * products[0].quantity * 0.02)),
+    subtotal: computed(
+      () =>
+        products[0].price * products[0].quantity -
+        products[0].price * products[0].quantity * 0.02,
+    ),
   },
   {
     id: 2,
@@ -47,7 +47,11 @@ const products: Product[] = [
     price: 2,
     quantity: 3,
     discount: "5%",
-    subtotal: computed(() => products[1].price * products[1].quantity - (products[1].price * products[1].quantity * 0.05))
+    subtotal: computed(
+      () =>
+        products[1].price * products[1].quantity -
+        products[1].price * products[1].quantity * 0.05,
+    ),
   },
   {
     id: 3,
@@ -55,12 +59,15 @@ const products: Product[] = [
     price: 2,
     quantity: 5,
     discount: "-",
-    subtotal: computed(() => products[2].price * products[2].quantity - (products[2].price * products[2].quantity * 0)),
-  }
-]
+    subtotal: computed(
+      () =>
+        products[2].price * products[2].quantity -
+        products[2].price * products[2].quantity * 0,
+    ),
+  },
+];
 
 const total = computed(() => {
-  return products.reduce((acc, product) => acc + product.subtotal.value, 0)
-})
-
+  return products.reduce((acc, product) => acc + product.subtotal.value, 0);
+});
 </script>
