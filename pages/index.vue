@@ -7,7 +7,7 @@
         <p class="mt-0 mb-4 text-700 line-height-3">This is a landing page created using PrimeBlocks and PrimeVue, for demo purposes. Feel free to click on the links above and see the examples.</p>
             
         <Button label="Toggle Dialog Example" type="button" class="mr-3 p-button-raised" @click="toggleDialog"></Button>
-        <Button label="Look, that's an AI generated image" type="button" icon="pi pi-arrow-right" class="p-button-outlined mt-2"></Button>
+        <Button label="Look, that's an AI generated image (o11y enabled)" type="button" icon="pi pi-arrow-right" class="p-button-outlined mt-2"></Button>
         <Dialog 
           v-model:visible="isVisible"
           modal
