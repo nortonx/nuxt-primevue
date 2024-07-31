@@ -32,8 +32,8 @@
           header="Disclaimer"
           footer="- Norton Almeida"
           close-on-escape
-          @onHide="isVisible = false"
           :style="{ width: '50vw' }"
+          @on-hide="isVisible = false"
         >
           <p>
             The content presented here were implemented based on code challenges

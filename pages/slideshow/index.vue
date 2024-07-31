@@ -11,8 +11,8 @@
             <div class="card col-8 col-offset-2">
               <Galleria
                 :value="images"
-                :responsiveOptions="responsiveOptions"
-                :numVisible="3"
+                :responsive-options="responsiveOptions"
+                :num-visible="3"
                 :circular="true"
               >
                 <template #item="slotProps">
@@ -59,9 +59,9 @@
           <TabPanel header="Carousel Component">
             <Carousel
               :value="images"
-              :numVisible="3"
-              :numScroll="3"
-              :responsiveOptions="responsiveOptionsCarousel"
+              :num-visible="3"
+              :num-scroll="3"
+              :responsive-options="responsiveOptionsCarousel"
             >
               <template #item="slotProps">
                 <div class="border-1 surface-border border-round m-2 p-3">

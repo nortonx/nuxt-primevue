@@ -7,13 +7,13 @@
     <div class="grid">
       <div class="col-8 col-offset-2">
         <div class="shadow-2 p-4 h-full flex flex-column surface-card">
-          <IconField iconPosition="left">
+          <IconField icon-position="left">
             <InputIcon class="pi pi-search"></InputIcon>
             <InputText
+              ref="searchField"
+              v-model="searchTerm"
               placeholder="Search by ACT Symbol"
               class="w-full"
-              v-model="searchTerm"
-              ref="searchField"
               variant="filled"
             ></InputText>
           </IconField>
@@ -24,7 +24,7 @@
           :value="filteredData"
           :paginator="true"
           :rows="10"
-          :rowsPerPageOptions="[5, 10, 20]"
+          :rows-per-page-options="[5, 10, 20]"
         >
           <Column field="ACT Symbol" header="ACT Symbol" sortable></Column>
           <Column

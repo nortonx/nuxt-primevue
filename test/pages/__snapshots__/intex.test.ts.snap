@@ -4,8 +4,8 @@ exports[`Index page > should render correctly and match snapshot 1`] = `
 "<div class="grid grid-nogutter surface-section text-800">
   <div class="lg:col-6 md:col-6 p-6 text-center md:text-left flex align-items-center">
     <section><span class="block text-6xl font-bold mb-1">Norton Almeida</span>
-      <div class="text-6xl text-primary font-bold mb-3">Vue.js Frontend Developer</div>
-      <p class="mt-0 mb-4 text-700 line-height-3">This is a landing page created using PrimeBlocks and PrimeVue, for demo purposes. Feel free to click on the links above and see the examples.</p>
+      <div class="text-6xl text-primary font-bold mb-3"> Vue.js Frontend Developer </div>
+      <p class="mt-0 mb-4 text-700 line-height-3"> This is a landing page created using PrimeBlocks and PrimeVue, for demo purposes. Feel free to click on the links above and see the examples. </p>
       <button-stub label="Toggle Dialog Example" type="button" class="mr-3 p-button-raised"></button-stub>
       <button-stub label="Look, that's an AI generated image (o11y enabled)" type="button" icon="pi pi-arrow-right" class="p-button-outlined mt-2"></button-stub>
       <dialog-stub visible="false" modal="" header="Disclaimer" footer="- Norton Almeida" close-on-escape="" style="width: 50vw;"></dialog-stub>

@@ -12,7 +12,7 @@
           v-model="content"
           rows="8"
           cols="60"
-          autoResize
+          auto-resize
           class="w-full border-round shadow-2 p-3 text-800"
         ></Textarea>
       </div>

@@ -5,11 +5,11 @@
       <div class="col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <InputText
+            v-model="todo"
             placeholder="What needs to be done?"
             class="w-full"
-            v-model="todo"
-            @keydown.enter="addTodo"
             variant="filled"
+            @keydown.enter="addTodo"
           ></InputText>
           <Button label="Add" class="w-full mt-3" @click="addTodo"></Button>
         </div>
@@ -18,8 +18,8 @@
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <div class="flex flex-column mx-4">
             <div
-              class="text-900 font-bold text-xl text-center"
               v-if="emptyList"
+              class="text-900 font-bold text-xl text-center"
             >
               No items in the list
             </div>
@@ -34,13 +34,13 @@
                   :class="todo.completed ? 'pi-check' : 'pi-times'"
                 ></i>
                 <div
-                  @click="strikeTodo(index)"
                   :style="
                     todo.completed
                       ? 'text-decoration: line-through'
                       : 'text-decoration: none'
                   "
                   class="my-2 todo-item__text"
+                  @click="strikeTodo(index)"
                 >
                   {{ todo.title }}
                 </div>

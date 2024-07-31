@@ -4,7 +4,7 @@
     <div class="grid">
       <div class="col-10 col-offset-1">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
-          <DataTable ref="dt" :value="products" dataKey="id">
+          <DataTable ref="dt" :value="products" data-key="id">
             <Column field="name" header="Name"></Column>
             <Column field="price" header="Price"></Column>
             <Column field="quantity" header="Quantity"></Column>

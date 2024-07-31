@@ -44,9 +44,9 @@
       <label for="phone" class="block text-900 font-medium mb-1">Phone</label>
       <InputMask
         id="phone"
+        v-model="formData.phone"
         mask="+99 (99) 9 9999-9999"
         placeholder="+1 (99) 9 9999-9999"
-        v-model="formData.phone"
         class="w-full mb-2"
         @blur="$v.formData.phone.$touch"
       />
@@ -60,8 +60,8 @@
       >
       <InputText
         id="password"
-        type="password"
         v-model="formData.password"
+        type="password"
         class="w-full mb-2"
         @blur="$v.formData.password.$touch"
       />
@@ -77,7 +77,7 @@
         id="country"
         v-model="formData.country"
         :options="countries"
-        optionLabel="name"
+        option-label="name"
         placeholder="Select a Country"
         class="w-full mb-2"
       />
@@ -100,7 +100,7 @@
     </div>
   </div>
   <Panel header="List of users">
-    <div class="card" v-if="formStore.records">
+    <div v-if="formStore.records" class="card">
       <ul class="user-list list-none p-0 flex flex-wrap">
         <li
           v-for="(record, index) in formStore.records"

@@ -13,6 +13,7 @@
     "test:watch": "vitest --watch --reporter=verbose",
     "test": "vitest --run --reporter=verbose",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write \"{components,pages,plugins,middleware,layouts,composables,assets}/**/*.{js,jsx,ts,tsx,vue,html,css,scss,json,md}\""
     },
   "dependencies": {
