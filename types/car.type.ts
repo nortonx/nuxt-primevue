@@ -4,5 +4,5 @@ export type Car = {
   plate: string;
   user: {
     name: string;
-  }
-}
+  };
+};

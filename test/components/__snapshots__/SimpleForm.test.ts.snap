@@ -12,13 +12,13 @@ exports[`SimpleForm component > it should render correctly and match snapshot 1`
     <input-text-stub data-v-e0d39d9a="" id="email" modelvalue="" class="w-full mb-2"></input-text-stub><span data-v-e0d39d9a="" class="error-message" style="display: none;">E-mail with invalid format</span>
   </div>
   <div data-v-e0d39d9a="" class="field col-12 md:col-6"><label data-v-e0d39d9a="" for="phone" class="block text-900 font-medium mb-1">Phone</label>
-    <input-mask-stub data-v-e0d39d9a="" id="phone" mask="+99 (99) 9 9999-9999" placeholder="+1 (99) 9 9999-9999" modelvalue="" class="w-full mb-2"></input-mask-stub><span data-v-e0d39d9a="" class="error-message" style="display: none;">Phone number is required</span>
+    <input-mask-stub data-v-e0d39d9a="" id="phone" modelvalue="" mask="+99 (99) 9 9999-9999" placeholder="+1 (99) 9 9999-9999" class="w-full mb-2"></input-mask-stub><span data-v-e0d39d9a="" class="error-message" style="display: none;">Phone number is required</span>
   </div>
   <div data-v-e0d39d9a="" class="field col-12 md:col-6"><label data-v-e0d39d9a="" for="password" class="block text-900 font-medium mb-1">Password</label>
-    <input-text-stub data-v-e0d39d9a="" id="password" type="password" modelvalue="" class="w-full mb-2"></input-text-stub><span data-v-e0d39d9a="" class="error-message" style="display: none;">Password should be at least 6 characters long</span>
+    <input-text-stub data-v-e0d39d9a="" id="password" modelvalue="" type="password" class="w-full mb-2"></input-text-stub><span data-v-e0d39d9a="" class="error-message" style="display: none;">Password should be at least 6 characters long</span>
   </div>
   <div data-v-e0d39d9a="" class="field col-12 md:col-6"><label data-v-e0d39d9a="" class="block text-900 font-medium mb-1" for="country">Country</label>
-    <dropdown-stub data-v-e0d39d9a="" id="country" modelvalue="[object Object]" options="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" optionlabel="name" placeholder="Select a Country" class="w-full mb-2"></dropdown-stub><span data-v-e0d39d9a="" class="error-message" style="display: none;">Select an option</span>
+    <dropdown-stub data-v-e0d39d9a="" id="country" modelvalue="[object Object]" options="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" option-label="name" placeholder="Select a Country" class="w-full mb-2"></dropdown-stub><span data-v-e0d39d9a="" class="error-message" style="display: none;">Select an option</span>
   </div>
   <div data-v-e0d39d9a="" class="errors"><code data-v-e0d39d9a=""></code>
     <!--v-if-->

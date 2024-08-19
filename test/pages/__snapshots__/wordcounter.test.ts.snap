@@ -5,10 +5,10 @@ exports[`Wordcounter page > should render correctly and match snapshot 1`] = `
   <div class="grid">
     <div class="col-12">
       <h1 class="text-4xl font-bold text-center mb-4">Word Counter</h1>
-      <p class="text-center text-800">Enter your text below to count the number of words.</p>
+      <p class="text-center text-800"> Enter your text below to count the number of words. </p>
     </div>
     <div class="col-8 col-offset-2">
-      <textarea-stub modelvalue="" rows="8" cols="60" autoresize="" class="w-full border-round shadow-2 p-3 text-800"></textarea-stub>
+      <textarea-stub modelvalue="" rows="8" cols="60" auto-resize="" class="w-full border-round shadow-2 p-3 text-800"></textarea-stub>
     </div>
     <div class="col-8 col-offset-2 flex">
       <counter-box-stub counter="0" label="Words"></counter-box-stub>
