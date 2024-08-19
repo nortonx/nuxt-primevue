@@ -1,10 +1,11 @@
-import { shallowMount, VueWrapper } from "@vue/test-utils";
+import type { VueWrapper } from "@vue/test-utils";
+import { shallowMount } from "@vue/test-utils";
 import Todo from "@/pages/todo/index.vue";
 import { describe, it, expect, beforeEach } from "vitest";
 import { createTestingPinia } from "@pinia/testing";
 
 describe("Todo page", () => {
-  let wrapper: VueWrapper<any>;
+  let wrapper: VueWrapper<unknown>;
   beforeEach(() => {
     wrapper = shallowMount(Todo, {
       global: {

@@ -5,7 +5,7 @@
       <div class="col-8 col-offset-2">
         <div class="shadow-2 p-3 h-full flex flex-column surface-card">
           <InputText
-            v-model="todo"
+            v-model="todoItem"
             placeholder="What needs to be done?"
             class="w-full"
             variant="filled"
@@ -71,7 +71,7 @@ import { type ToDo } from "@/types/todo.type";
 import { useTodoStore } from "@/stores/todo.store";
 
 const todoStore = useTodoStore();
-const todo = ref<string>("");
+const todoItem = ref<string>("");
 
 // Computed properties
 const completedItems = computed(
@@ -81,13 +81,13 @@ const emptyList = computed(() => todoStore.todos.length === 0);
 
 // Methods
 function addTodo() {
-  if (todo.value.trim() === "") return;
+  if (todoItem.value.trim() === "") return;
   todoStore.add({
     id: todoStore.todos.length + 1,
-    title: todo.value,
+    title: todoItem.value,
     completed: false,
   });
-  todo.value = "";
+  todoItem.value = "";
 }
 
 function strikeTodo(index: number) {

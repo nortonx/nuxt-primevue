@@ -17,7 +17,15 @@
 
 <script setup lang="ts">
 const props = defineProps({
-  counter: Number,
-  label: String,
+  counter: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
+  label: {
+    type: String,
+    required: true,
+    default: "",
+  },
 });
 </script>
