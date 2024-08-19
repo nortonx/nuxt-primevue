@@ -3,7 +3,7 @@ import CarUnit from "@/components/CarUnit.vue";
 import { describe, it, expect, beforeEach } from "vitest";
 
 describe("Car component", () => {
-  let wrapper: VueWrapper<any>;
+  let wrapper: VueWrapper<unknown>;
 
   beforeEach(() => {
     wrapper = shallowMount(CarUnit, {
