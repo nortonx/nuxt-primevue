@@ -3,9 +3,9 @@
 exports[`About page > should render correctly and match snapshot 1`] = `
 "<div class="grid surface-section px-4 py-8 md:px-6 lg:px-8">
   <div class="text-700 col-8 col-offset-2">
-    <div class="text-blue-600 font-bold mb-3 text-3xl text-center"><i class="pi pi-prime"></i>&nbsp;POWERED BY PrimeVue</div>
+    <div class="text-blue-600 font-bold mb-3 text-3xl text-center"><i class="pi pi-prime"></i>&nbsp;POWERED BY PrimeVue </div>
     <div class="text-700 text-2xl mb-5">
-      <h2 class="text-center">This website was built using a powerful combination of cutting-edge technologies:</h2>
+      <h2 class="text-center"> This website was built using a powerful combination of cutting-edge technologies: </h2>
       <ul class="about-list p-l2">
         <li class="text-xl"> Nuxt 3: A lightning-fast and feature-rich framework for building Vue.js applications. Nuxt 3 offers server-side rendering, static site generation, and a fantastic developer experience. </li>
         <li class="text-xl"> Pinia: A modern state management library for Vue.js applications. Pinia provides a clean and intuitive way to manage application state, making your code easier to understand and maintain. </li>
