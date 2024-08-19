@@ -1,12 +1,12 @@
-import { shallowMount } from "@vue/test-utils";
-import Car from "@/components/Car.vue";
+import { shallowMount, type VueWrapper } from "@vue/test-utils";
+import CarUnit from "@/components/CarUnit.vue";
 import { describe, it, expect, beforeEach } from "vitest";
 
 describe("Car component", () => {
-  let wrapper: any;
+  let wrapper: VueWrapper<any>;
 
   beforeEach(() => {
-    wrapper = shallowMount(Car, {
+    wrapper = shallowMount(CarUnit, {
       props: {
         carModel: "Toyota",
         carPlate: "ABC-1234",

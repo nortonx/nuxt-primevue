@@ -2,12 +2,12 @@
   A unit test with "mount" would be an integrated test since it mounts the component and its children.
   A unit test with "shallowMount" would be a unit test since it mounts the component only.
 */
-import { shallowMount } from "@vue/test-utils";
-import Header from "@/components/Header.vue";
+import { shallowMount, type VueWrapper } from "@vue/test-utils";
+import Header from "@/components/MainHeader.vue";
 import { describe, it, expect, beforeEach } from "vitest";
 
 describe("Header component", () => {
-  let wrapper: any;
+  let wrapper: VueWrapper<unknown>;
 
   const items = [
     {

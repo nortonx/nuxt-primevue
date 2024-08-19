@@ -32,7 +32,7 @@
 import type { Car } from "@/types/car.type";
 
 const API_URL = import.meta.env.VITE_PARKING_API_URL as string;
-const { data, error } = useFetch<Car[]>(`${API_URL}/cars`);
+const { data } = useFetch<Car[]>(`${API_URL}/cars`);
 const carData = data;
 
 onMounted(() => {

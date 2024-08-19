@@ -31,7 +31,6 @@
 </template>
 
 <script lang="ts" setup>
-import svg from "@/assets/car.svg";
 const props = defineProps<{
   carModel: string;
   carPlate: string;

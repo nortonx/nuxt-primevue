@@ -13,7 +13,7 @@
         <path d="..." fill="var(--p-text-color)" />
       </svg>
     </template>
-    <template #item="{ item, props, root }">
+    <template #item="{ item, props }">
       <NuxtLink :to="item.to" class="flex items-center" v-bind="props.action">
         <span :class="item.icon"></span>
         <span class="item-label ml-2">{{ item.label }}</span>

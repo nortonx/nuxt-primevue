@@ -1,9 +1,9 @@
-import { shallowMount } from "@vue/test-utils";
-import Footer from "@/components/Footer.vue";
+import { shallowMount, type VueWrapper } from "@vue/test-utils";
+import Footer from "@/components/MainFooter.vue";
 import { describe, it, expect, beforeEach } from "vitest";
 
 describe("Footer component", () => {
-  let wrapper: any;
+  let wrapper: VueWrapper<unknown>;
 
   beforeEach(() => {
     wrapper = shallowMount(Footer);

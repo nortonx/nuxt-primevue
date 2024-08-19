@@ -1,9 +1,9 @@
-import { shallowMount } from "@vue/test-utils";
+import { shallowMount, type VueWrapper } from "@vue/test-utils";
 import CounterBox from "@/components/CounterBox.vue";
 import { describe, it, expect, beforeEach } from "vitest";
 
 describe("CounterBox component", () => {
-  let wrapper: any;
+  let wrapper: VueWrapper<unknown>;
   beforeEach(() => {
     wrapper = shallowMount(CounterBox, {
       props: {
