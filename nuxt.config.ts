@@ -10,13 +10,16 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: "page", mode: "out-in" },
   },
+
   devtools: { enabled: true },
+
   modules: [
     "nuxt-primevue",
     "@pinia/nuxt",
     "@nuxt/test-utils/module",
     "@nuxt/eslint",
   ],
+
   runtimeConfig: {
     public: {
       APP_VERSION: pkg.version,
@@ -24,6 +27,7 @@ export default defineNuxtConfig({
       APP_MODE: process.env?.NODE_ENV,
     },
   },
+
   primevue: {
     usePrimeVue: true,
     options: {
@@ -45,13 +49,17 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   css: [
     "primevue/resources/themes/saga-purple/theme.css",
     "primevue/resources/primevue.min.css",
     "primeflex/primeflex.css",
     "primeicons/primeicons.css",
   ],
+
   devServer: {
     port: 3080,
   },
+
+  compatibilityDate: "2024-08-21",
 });
