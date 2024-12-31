@@ -4,5 +4,5 @@ export type Product = {
   price: number;
   quantity: number;
   discount: string;
-  subtotal: number;
+  subtotal: ComputedRef<number>;
 };
